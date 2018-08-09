@@ -1,6 +1,6 @@
 Warning: no error handling, no warranty
 ```
-git clone https://github.com/imylomylo/komodo-rpc-lib.git
+git clone THIS_REPO
 cd komodo-rpc-lib
 npm install
 npm run start
