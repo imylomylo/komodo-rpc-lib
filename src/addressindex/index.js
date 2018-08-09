@@ -1,42 +1,58 @@
 // == Addressindex ==
 // getaddressbalance
-rpc.getaddressbalance().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getaddressbalance(rpc) {
+    rpc.getaddressbalance().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getaddressdeltas
-rpc.getaddressdeltas().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getaddressdeltas(rpc) {
+    rpc.getaddressdeltas().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getaddressmempool
-rpc.getaddressmempool().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getaddressmempool(rpc) {
+    rpc.getaddressmempool().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getaddresstxids
-rpc.getaddresstxids().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getaddresstxids(rpc) {
+    rpc.getaddresstxids().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getaddressutxos
-rpc.getaddressutxos().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getaddressutxos(rpc) {
+    rpc.getaddressutxos().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getsnapshot
-rpc.getsnapshot().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getsnapshot(rpc) {
+    rpc.getsnapshot().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
+
+export {
+    getaddressbalance,
+    getaddressdeltas,
+    getaddressmempool,
+    getaddresstxids,
+    getaddressutxos,
+    getsnapshot
+}

@@ -1,21 +1,31 @@
 // == Control ==
 // getinfo
-rpc.getinfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getinfo(rpc) {
+    rpc.getinfo().then(resp => {
+        // console.log(resp)
+        return resp
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // help ( "command" )
-rpc.help().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function help(rpc) {
+    rpc.help().then(resp => {
+        console.log(resp)
+        return resp
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // stop
-rpc.stop().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function stop(rpc) {
+    rpc.stop().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
+
+export { getinfo, help, stop };

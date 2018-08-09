@@ -1,49 +1,65 @@
 // == Rewards ==
 // rewardsaddfunding name fundingtxid amount
-rpc.rewardsaddfunding().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function rewardsaddfunding(rpc) {
+    rpc.rewardsaddfunding().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // rewardsaddress [pubkey]
-rpc.rewardsaddress().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function rewardsaddress(rpc) {
+    rpc.rewardsaddress().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // rewardscreatefunding name amount APR mindays maxdays mindeposit
-rpc.rewardscreatefunding().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function rewardscreatefunding(rpc) {
+    rpc.rewardscreatefunding().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // rewardsinfo fundingtxid
-rpc.rewardsinfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function rewardsinfo(rpc) {
+    rpc.rewardsinfo().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // rewardslist
-rpc.rewardslist().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function rewardslist(rpc) {
+    rpc.rewardslist().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // rewardslock name fundingtxid amount
-rpc.rewardslock().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function rewardslock(rpc) {
+    rpc.rewardslock().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 // rewardsunlock name fundingtxid [txid]
-rpc.rewardsunlock().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function rewardsunlock(rpc) {
+    rpc.rewardsunlock().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
+
+export { rewardsaddfunding, rewardsaddress, rewardscreatefunding, rewardsinfo, rewardslist, rewardslock, rewardsunlock }

@@ -1,175 +1,229 @@
 // == Blockchain ==
 // coinsupply <height>
-rpc.coinsupply().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function coinsupply(rpc) {
+    rpc.coinsupply().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getbestblockhash
-rpc.getbestblockhash().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getbestblockhash(rpc) {
+    rpc.getbestblockhash().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getblock "hash|height" ( verbose )
-rpc.getblock().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getblock(rpc) {
+    rpc.getblock().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getblockchaininfo
-rpc.getblockchaininfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getblockchaininfo(rpc) {
+    rpc.getblockchaininfo().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getblockcount
-rpc.getblockcount().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getblockcount(rpc) {
+    rpc.getblockcount().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getblockhash index
-rpc.getblockhash().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getblockhash(rpc) {
+    rpc.getblockhash().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getblockhashes timestamp
-rpc.getblockhashes().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getblockhashes(rpc) {
+    rpc.getblockhashes().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getblockheader "hash" ( verbose )
-rpc.getblockheader().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getblockheader(rpc) {
+    rpc.getblockheader().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getchaintips
-rpc.getchaintips().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getchaintips(rpc) {
+    rpc.getchaintips().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getdifficulty
-rpc.getdifficulty().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getdifficulty(rpc) {
+    rpc.getdifficulty().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getmempoolinfo
-rpc.getmempoolinfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getmempoolinfo(rpc) {
+    rpc.getmempoolinfo().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getrawmempool ( verbose )
-rpc.getrawmempool().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getrawmempool(rpc) {
+    rpc.getrawmempool().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // getspentinfo
-rpc.getspentinfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function getspentinfo(rpc) {
+    rpc.getspentinfo().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // gettxout "txid" n ( includemempool )
-rpc.gettxout().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function gettxout(rpc) {
+    rpc.gettxout().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // gettxoutproof ["txid",...] ( blockhash )
-rpc.gettxoutproof().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function gettxoutproof(rpc) {
+    rpc.gettxoutproof().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // gettxoutsetinfo
-rpc.gettxoutsetinfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function gettxoutsetinfo(rpc) {
+    rpc.gettxoutsetinfo().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // kvsearch key
-rpc.kvsearch().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function kvsearch(rpc) {
+    rpc.kvsearch().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // kvupdate key "value" days passphrase
-rpc.kvupdate().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function kvupdate(rpc) {
+    rpc.kvupdate().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // minerids needs height
-rpc.minerids().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function minerids(rpc) {
+    rpc.minerids().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // notaries height timestamp
-rpc.notaries().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function notaries(rpc) {
+    rpc.notaries().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // paxpending needs no args
-rpc.paxpending().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function paxpending(rpc) {
+    rpc.paxpending().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // paxprice "base" "rel" height
-rpc.paxprice().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function paxprice(rpc) {
+    rpc.paxprice().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // paxprices "base" "rel" maxsamples
-rpc.paxprices().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function paxprices(rpc) {
+    rpc.paxprices().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // verifychain ( checklevel numblocks )
-rpc.verifychain().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
-
+function verifychain(rpc) {
+    rpc.verifychain().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 // verifytxoutproof "proof"
-rpc.verifytxoutproof().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function verifytxoutproof(rpc) {
+    rpc.verifytxoutproof().then(resp => {
+        console.log(resp)
+    }).catch(error => {
+        console.log(error)
+    })
+}
+
+export {
+    coinsupply,
+    getbestblockhash,
+    getblock,
+    getblockchaininfo,
+    getblockcount,
+    getblockhash,
+    getblockhashes,
+    getblockheader,
+    getchaintips,
+    getdifficulty,
+    getmempoolinfo,
+    getrawmempool,
+    getspentinfo,
+    gettxout,
+    gettxoutproof,
+    gettxoutsetinfo,
+    kvsearch,
+    kvupdate,
+    minerids,
+    notaries,
+    paxpending,
+    paxprice,
+    paxprices,
+    verifychain,
+    verifytxoutproof
+}
