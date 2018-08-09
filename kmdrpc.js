@@ -1,6 +1,6 @@
-const stdrpc = require('stdrpc')
+import stdrpc from 'stdrpc'
 
-class KMDrpc {
+export default class {
     constructor(url, username, password) {
         this.url = url;
         this.username = username;
@@ -131,5 +131,3 @@ class KMDrpc {
         })
     }
 }
-
-module.exports = kmdrpc
