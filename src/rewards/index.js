@@ -1,65 +1,95 @@
 // == Rewards ==
 // rewardsaddfunding name fundingtxid amount
 function rewardsaddfunding(rpc) {
-    rpc.rewardsaddfunding().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.rewardsaddfunding().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 
+
 // rewardsaddress [pubkey]
 function rewardsaddress(rpc) {
-    rpc.rewardsaddress().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.rewardsaddress().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 
 // rewardscreatefunding name amount APR mindays maxdays mindeposit
 function rewardscreatefunding(rpc) {
-    rpc.rewardscreatefunding().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.rewardscreatefunding().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 
 // rewardsinfo fundingtxid
 function rewardsinfo(rpc) {
-    rpc.rewardsinfo().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.rewardsinfo().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 
 // rewardslist
 function rewardslist(rpc) {
-    rpc.rewardslist().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.rewardslist().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 
 // rewardslock name fundingtxid amount
 function rewardslock(rpc) {
-    rpc.rewardslock().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.rewardslock().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 
 // rewardsunlock name fundingtxid [txid]
 function rewardsunlock(rpc) {
-    rpc.rewardsunlock().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.rewardsunlock().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 
-export { rewardsaddfunding, rewardsaddress, rewardscreatefunding, rewardsinfo, rewardslist, rewardslock, rewardsunlock }
+export {
+    rewardsaddfunding,
+    rewardsaddress,
+    rewardscreatefunding,
+    rewardsinfo,
+    rewardslist,
+    rewardslock,
+    rewardsunlock
+}

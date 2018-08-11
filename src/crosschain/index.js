@@ -1,49 +1,100 @@
 // == Crosschain ==
 // MoMoMdata symbol kmdheight ccid
-rpc.MoMoMdata().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function MoMoMdata(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.MoMoMdata().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // assetchainproof needs a txid
-rpc.assetchainproof().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function assetchainproof(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.assetchainproof().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // calc_MoM height MoMdepth
-rpc.calc_MoM().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function calc_MoM(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.calc_MoM().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // height_MoM height
-rpc.height_MoM().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function height_MoM(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.height_MoM().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // migrate_completeimporttransaction importTx
-rpc.migrate_completeimporttransaction().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function migrate_completeimporttransaction(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.migrate_completeimporttransaction().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // migrate_converttoexport rawTx dest_symbol export_amount
-rpc.migrate_converttoexport().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function migrate_converttoexport(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.migrate_converttoexport().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // migrate_createimporttransaction burnTx payouts
-rpc.migrate_createimporttransaction().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function migrate_createimporttransaction(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.migrate_createimporttransaction().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
+export {
+    MoMoMdata,
+    assetchainproof,
+    calc_MoM,
+    height_MoM,
+    migrate_completeimporttransaction,
+    migrate_converttoexport,
+    migrate_createimporttransaction
+}

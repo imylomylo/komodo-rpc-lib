@@ -1,50 +1,70 @@
 // == Addressindex ==
 // getaddressbalance
 function getaddressbalance(rpc) {
-    rpc.getaddressbalance().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getaddressbalance().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getaddressdeltas
 function getaddressdeltas(rpc) {
-    rpc.getaddressdeltas().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getaddressdeltas().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getaddressmempool
 function getaddressmempool(rpc) {
-    rpc.getaddressmempool().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getaddressmempool().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 // getaddresstxids
 function getaddresstxids(rpc) {
-    rpc.getaddresstxids().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getaddresstxids().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 // getaddressutxos
 function getaddressutxos(rpc) {
-    rpc.getaddressutxos().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getaddressutxos().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 // getsnapshot
 function getsnapshot(rpc) {
-    rpc.getsnapshot().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getsnapshot().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 

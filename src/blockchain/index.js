@@ -1,204 +1,304 @@
 // == Blockchain ==
 // coinsupply <height>
 function coinsupply(rpc) {
-    rpc.coinsupply().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.coinsupply().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getbestblockhash
 function getbestblockhash(rpc) {
-    rpc.getbestblockhash().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getbestblockhash().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getblock "hash|height" ( verbose )
 function getblock(rpc) {
-    rpc.getblock().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getblock().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getblockchaininfo
 function getblockchaininfo(rpc) {
-    rpc.getblockchaininfo().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getblockchaininfo().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getblockcount
 function getblockcount(rpc) {
-    rpc.getblockcount().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getblockcount().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getblockhash index
 function getblockhash(rpc) {
-    rpc.getblockhash().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getblockhash().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getblockhashes timestamp
 function getblockhashes(rpc) {
-    rpc.getblockhashes().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getblockhashes().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getblockheader "hash" ( verbose )
 function getblockheader(rpc) {
-    rpc.getblockheader().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getblockheader().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getchaintips
 function getchaintips(rpc) {
-    rpc.getchaintips().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getchaintips().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getdifficulty
 function getdifficulty(rpc) {
-    rpc.getdifficulty().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getdifficulty().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getmempoolinfo
 function getmempoolinfo(rpc) {
-    rpc.getmempoolinfo().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getmempoolinfo().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getrawmempool ( verbose )
 function getrawmempool(rpc) {
-    rpc.getrawmempool().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getrawmempool().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // getspentinfo
 function getspentinfo(rpc) {
-    rpc.getspentinfo().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.getspentinfo().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // gettxout "txid" n ( includemempool )
 function gettxout(rpc) {
-    rpc.gettxout().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.gettxout().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // gettxoutproof ["txid",...] ( blockhash )
 function gettxoutproof(rpc) {
-    rpc.gettxoutproof().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.gettxoutproof().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // gettxoutsetinfo
 function gettxoutsetinfo(rpc) {
-    rpc.gettxoutsetinfo().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.gettxoutsetinfo().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // kvsearch key
 function kvsearch(rpc) {
-    rpc.kvsearch().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.kvsearch().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // kvupdate key "value" days passphrase
 function kvupdate(rpc) {
-    rpc.kvupdate().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.kvupdate().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // minerids needs height
 function minerids(rpc) {
-    rpc.minerids().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.minerids().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // notaries height timestamp
 function notaries(rpc) {
-    rpc.notaries().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.notaries().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // paxpending needs no args
 function paxpending(rpc) {
-    rpc.paxpending().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.paxpending().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // paxprice "base" "rel" height
 function paxprice(rpc) {
-    rpc.paxprice().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.paxprice().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // paxprices "base" "rel" maxsamples
 function paxprices(rpc) {
-    rpc.paxprices().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.paxprices().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // verifychain ( checklevel numblocks )
 function verifychain(rpc) {
-    rpc.verifychain().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.verifychain().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 // verifytxoutproof "proof"
 function verifytxoutproof(rpc) {
-    rpc.verifytxoutproof().then(resp => {
-        console.log(resp)
-    }).catch(error => {
-        console.log(error)
+    return new Promise((resolve, reject) => {
+        rpc.verifytxoutproof().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
+
 
 export {
     coinsupply,

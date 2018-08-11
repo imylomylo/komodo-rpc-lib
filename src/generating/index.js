@@ -1,21 +1,42 @@
 // == Generating ==
 // generate numblocks
-rpc.generate().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function generate(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.generate().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // getgenerate
-rpc.getgenerate().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getgenerate(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.getgenerate().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // setgenerate generate ( genproclimit )
-rpc.setgenerate().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function setgenerate(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.setgenerate().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
+export {
+    generate,
+    getgenerate,
+    setgenerate
+}

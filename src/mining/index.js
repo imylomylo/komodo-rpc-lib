@@ -1,55 +1,107 @@
 // == Mining ==
 // getblocksubsidy height
-rpc.getblocksubsidy().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getblocksubsidy(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.getblocksubsidy().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // getblocktemplate ( "jsonrequestobject" )
-rpc.getblocktemplate().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getblocktemplate(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.getblocktemplate().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 // getlocalsolps
-rpc.getlocalsolps().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getlocalsolps(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.getlocalsolps().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // getmininginfo
-rpc.getmininginfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getmininginfo(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.getmininginfo().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // getnetworkhashps ( blocks height )
-rpc.getnetworkhashps().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getnetworkhashps(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.getnetworkhashps().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // getnetworksolps ( blocks height )
-rpc.getnetworksolps().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function getnetworksolps(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.getnetworksolps().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // prioritisetransaction <txid> <priority delta> <fee delta>
-rpc.prioritisetransaction().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function prioritisetransaction(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.prioritisetransaction().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
 
 // submitblock "hexdata" ( "jsonparametersobject" )
-rpc.submitblock().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function submitblock(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.submitblock().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
+export {
+    getblocksubsidy,
+    getblocktemplate,
+    getlocalsolps,
+    getmininginfo,
+    getnetworkhashps,
+    getnetworksolps,
+    prioritisetransaction,
+    submitblock
+}

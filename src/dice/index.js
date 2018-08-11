@@ -1,56 +1,114 @@
 // == Dice ==
 // diceaddfunds name fundingtxid amount
-rpc.diceaddfunds().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function diceaddfunds(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.diceaddfunds().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // diceaddress [pubkey]
-rpc.diceaddress().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function diceaddress(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.diceaddress().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // dicebet name fundingtxid amount odds
-rpc.dicebet().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function dicebet(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.dicebet().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // dicefinish name fundingtxid bettxid
-rpc.dicefinish().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function dicefinish(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.dicefinish().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // dicefund name funds minbet maxbet maxodds timeoutblocks
-rpc.dicefund().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function dicefund(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.dicefund().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // diceinfo fundingtxid
-rpc.diceinfo().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function diceinfo(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.diceinfo().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // dicelist
-rpc.dicelist().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function dicelist(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.dicelist().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
 
 // dicestatus name fundingtxid bettxid
-rpc.dicestatus().then(resp => {
-    console.log(resp)
-}).catch(error => {
-    console.log(error)
-})
+function dicestatus(rpc) {
+    return new Promise((resolve, reject) => {
+        rpc.dicestatus().then(resp => {
+            return resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+    })
+}
+
+export {
+    diceaddfunds,
+    diceaddress,
+    dicebet,
+    dicefinish,
+    dicefund,
+    diceinfo,
+    dicelist,
+    dicestatus
+}
