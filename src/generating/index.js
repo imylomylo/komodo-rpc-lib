@@ -1,9 +1,9 @@
 // == Generating ==
 // generate numblocks
-function generate(rpc) {
+export function generate(rpc) {
     return new Promise((resolve, reject) => {
         rpc.generate().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -12,10 +12,10 @@ function generate(rpc) {
 }
 
 // getgenerate
-function getgenerate(rpc) {
+export function getgenerate(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getgenerate().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -24,10 +24,10 @@ function getgenerate(rpc) {
 }
 
 // setgenerate generate ( genproclimit )
-function setgenerate(rpc) {
+export function setgenerate(rpc) {
     return new Promise((resolve, reject) => {
         rpc.setgenerate().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -35,7 +35,7 @@ function setgenerate(rpc) {
     })
 }
 
-export {
+export default {
     generate,
     getgenerate,
     setgenerate

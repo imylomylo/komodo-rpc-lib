@@ -1,6 +1,8 @@
-import kmdrpc from './kmdrpc'
+import kmdrpc from './src/kmdrpc'
+import control, { connect, stop } from './src/control'
 
-let ab = new kmdrpc("http://62.210.81.14:7771","user","pass")
+const rpc = connect("http://62.210.81.14:7771","user","pass")
+control.stop(rpc).then(displayResponse)
 // TEST KEY
 // pub: RWPg8B91kfK5UtUN7z6s6TeV9cHSGtVY8D 
 // priv: UqMgxk7ySPNQ4r9nKAFPjkXy6r5t898yhuNCjSZJLg3RAM4WW1m9

@@ -1,9 +1,9 @@
 // == Auction ==
 // auctionaddress [pubkey]
-function auctionaddress(rpc) {
+export function auctionaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.auctionaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -11,4 +11,4 @@ function auctionaddress(rpc) {
     })
 }
 
-export { auctionaddress }
+export default { auctionaddress }

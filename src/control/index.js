@@ -1,10 +1,19 @@
+export function connect(url, username, password) {
+    console.log("Connecting to " + url)
+    const rpc = stdrpc({
+        url: url,
+        username: username,
+        password: password
+    })
+    return rpc;
+}
 // == Control ==
 // getinfo
-function getinfo(rpc) {
+export function getinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getinfo().then(resp => {
             // console.log(resp)
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -13,11 +22,11 @@ function getinfo(rpc) {
 }
 
 // help ( "command" )
-function help(rpc) {
+export function help(rpc) {
     return new Promise((resolve, reject) => {
         rpc.help().then(resp => {
             console.log(resp)
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -26,10 +35,10 @@ function help(rpc) {
 }
 
 // stop
-function stop(rpc) {
+export function stop(rpc) {
     return new Promise((resolve, reject) => {
         rpc.stop().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -37,4 +46,4 @@ function stop(rpc) {
     })
 }
 
-export { getinfo, help, stop };
+export default { connect, getinfo, help, stop }

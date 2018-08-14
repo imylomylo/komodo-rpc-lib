@@ -1,9 +1,9 @@
 // == Util ==
 // createmultisig nrequired ["key",...]
-function createmultisig(rpc) {
+export function createmultisig(rpc) {
     return new Promise((resolve, reject) => {
         rpc.createmultisig().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -12,10 +12,10 @@ function createmultisig(rpc) {
 }
 
 // estimatefee nblocks
-function estimatefee(rpc) {
+export function estimatefee(rpc) {
     return new Promise((resolve, reject) => {
         rpc.estimatefee().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -24,10 +24,10 @@ function estimatefee(rpc) {
 }
 
 // estimatepriority nblocks
-function estimatepriority(rpc) {
+export function estimatepriority(rpc) {
     return new Promise((resolve, reject) => {
         rpc.estimatepriority().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -36,10 +36,10 @@ function estimatepriority(rpc) {
 }
 
 // invalidateblock "hash"
-function invalidateblock(rpc) {
+export function invalidateblock(rpc) {
     return new Promise((resolve, reject) => {
         rpc.invalidateblock().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -48,10 +48,10 @@ function invalidateblock(rpc) {
 }
 
 // jumblr_deposit "depositaddress"
-function jumblr_deposit(rpc) {
+export function jumblr_deposit(rpc) {
     return new Promise((resolve, reject) => {
         rpc.jumblr_deposit().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -60,10 +60,10 @@ function jumblr_deposit(rpc) {
 }
 
 // jumblr_pause
-function jumblr_pause(rpc) {
+export function jumblr_pause(rpc) {
     return new Promise((resolve, reject) => {
         rpc.jumblr_pause().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -72,10 +72,10 @@ function jumblr_pause(rpc) {
 }
 
 // jumblr_resume
-function jumblr_resume(rpc) {
+export function jumblr_resume(rpc) {
     return new Promise((resolve, reject) => {
         rpc.jumblr_resume().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -84,10 +84,10 @@ function jumblr_resume(rpc) {
 }
 
 // jumblr_secret "secretaddress"
-function jumblr_secret(rpc) {
+export function jumblr_secret(rpc) {
     return new Promise((resolve, reject) => {
         rpc.jumblr_secret().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -96,10 +96,10 @@ function jumblr_secret(rpc) {
 }
 
 // reconsiderblock "hash"
-function reconsiderblock(rpc) {
+export function reconsiderblock(rpc) {
     return new Promise((resolve, reject) => {
         rpc.reconsiderblock().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -108,10 +108,10 @@ function reconsiderblock(rpc) {
 }
 
 // validateaddress "komodoaddress"
-function validateaddress(rpc) {
+export function validateaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.validateaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -120,10 +120,10 @@ function validateaddress(rpc) {
 }
 
 // verifymessage "komodoaddress" "signature" "message"
-function verifymessage(rpc) {
+export function verifymessage(rpc) {
     return new Promise((resolve, reject) => {
         rpc.verifymessage().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -132,10 +132,10 @@ function verifymessage(rpc) {
 }
 
 // z_validateaddress "zaddr"
-function z_validateaddress(rpc) {
+export function z_validateaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_validateaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -143,7 +143,7 @@ function z_validateaddress(rpc) {
     })
 }
 
-export {
+export default {
     createmultisig,
     estimatefee,
     estimatepriority,

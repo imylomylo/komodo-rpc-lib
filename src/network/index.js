@@ -1,9 +1,9 @@
 // == Network ==
 // addnode "node" "add|remove|onetry"
-function addnode(rpc) {
+export function addnode(rpc) {
     return new Promise((resolve, reject) => {
         rpc.addnode().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -12,10 +12,10 @@ function addnode(rpc) {
 }
 
 // clearbanned
-function clearbanned(rpc) {
+export function clearbanned(rpc) {
     return new Promise((resolve, reject) => {
         rpc.clearbanned().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -24,10 +24,10 @@ function clearbanned(rpc) {
 }
 
 // disconnectnode "node" 
-function disconnectnode(rpc) {
+export function disconnectnode(rpc) {
     return new Promise((resolve, reject) => {
         rpc.disconnectnode().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -36,10 +36,10 @@ function disconnectnode(rpc) {
 }
 
 // getaddednodeinfo dns ( "node" )
-function getaddednodeinfo(rpc) {
+export function getaddednodeinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddednodeinfo().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -48,10 +48,10 @@ function getaddednodeinfo(rpc) {
 }
 
 // getconnectioncount
-function getconnectioncount(rpc) {
+export function getconnectioncount(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getconnectioncount().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -60,10 +60,10 @@ function getconnectioncount(rpc) {
 }
 
 // getdeprecationinfo
-function getdeprecationinfo(rpc) {
+export function getdeprecationinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getdeprecationinfo().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -72,10 +72,10 @@ function getdeprecationinfo(rpc) {
 }
 
 // getnettotals
-function getnettotals(rpc) {
+export function getnettotals(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getnettotals().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -84,10 +84,10 @@ function getnettotals(rpc) {
 }
 
 // getnetworkinfo
-function getnetworkinfo(rpc) {
+export function getnetworkinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getnetworkinfo().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -96,10 +96,10 @@ function getnetworkinfo(rpc) {
 }
 
 // getpeerinfo
-function getpeerinfo(rpc) {
+export function getpeerinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getpeerinfo().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -108,10 +108,10 @@ function getpeerinfo(rpc) {
 }
 
 // listbanned
-function listbanned(rpc) {
+export function listbanned(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listbanned().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -120,10 +120,10 @@ function listbanned(rpc) {
 }
 
 // ping
-function ping(rpc) {
+export function ping(rpc) {
     return new Promise((resolve, reject) => {
         rpc.ping().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -132,10 +132,10 @@ function ping(rpc) {
 }
 
 // setban "ip(/netmask)" "add|remove" (bantime) (absolute)
-function setban(rpc) {
+export function setban(rpc) {
     return new Promise((resolve, reject) => {
         rpc.setban().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -143,7 +143,7 @@ function setban(rpc) {
     })
 }
 
-export {
+export default {
     addnode,
     clearbanned,
     disconnectnode,

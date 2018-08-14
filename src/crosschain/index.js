@@ -1,9 +1,9 @@
 // == Crosschain ==
 // MoMoMdata symbol kmdheight ccid
-function MoMoMdata(rpc) {
+export function MoMoMdata(rpc) {
     return new Promise((resolve, reject) => {
         rpc.MoMoMdata().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -13,10 +13,10 @@ function MoMoMdata(rpc) {
 
 
 // assetchainproof needs a txid
-function assetchainproof(rpc) {
+export function assetchainproof(rpc) {
     return new Promise((resolve, reject) => {
         rpc.assetchainproof().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -26,10 +26,10 @@ function assetchainproof(rpc) {
 
 
 // calc_MoM height MoMdepth
-function calc_MoM(rpc) {
+export function calc_MoM(rpc) {
     return new Promise((resolve, reject) => {
         rpc.calc_MoM().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -39,10 +39,10 @@ function calc_MoM(rpc) {
 
 
 // height_MoM height
-function height_MoM(rpc) {
+export function height_MoM(rpc) {
     return new Promise((resolve, reject) => {
         rpc.height_MoM().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -52,10 +52,10 @@ function height_MoM(rpc) {
 
 
 // migrate_completeimporttransaction importTx
-function migrate_completeimporttransaction(rpc) {
+export function migrate_completeimporttransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.migrate_completeimporttransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -65,10 +65,10 @@ function migrate_completeimporttransaction(rpc) {
 
 
 // migrate_converttoexport rawTx dest_symbol export_amount
-function migrate_converttoexport(rpc) {
+export function migrate_converttoexport(rpc) {
     return new Promise((resolve, reject) => {
         rpc.migrate_converttoexport().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -78,10 +78,10 @@ function migrate_converttoexport(rpc) {
 
 
 // migrate_createimporttransaction burnTx payouts
-function migrate_createimporttransaction(rpc) {
+export function migrate_createimporttransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.migrate_createimporttransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -89,7 +89,7 @@ function migrate_createimporttransaction(rpc) {
     })
 }
 
-export {
+export default {
     MoMoMdata,
     assetchainproof,
     calc_MoM,

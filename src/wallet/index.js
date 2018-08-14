@@ -1,9 +1,9 @@
 // == Wallet ==
 // addmultisigaddress nrequired ["key",...] ( "account" )
-function addmultisigaddress(rpc) {
+export function addmultisigaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.addmultisigaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -12,10 +12,10 @@ function addmultisigaddress(rpc) {
 }
 
 // backupwallet "destination"
-function backupwallet(rpc) {
+export function backupwallet(rpc) {
     return new Promise((resolve, reject) => {
         rpc.backupwallet().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -24,10 +24,10 @@ function backupwallet(rpc) {
 }
 
 // dumpprivkey "komodoaddress"
-function dumpprivkey(rpc) {
+export function dumpprivkey(rpc) {
     return new Promise((resolve, reject) => {
         rpc.dumpprivkey().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -36,10 +36,10 @@ function dumpprivkey(rpc) {
 }
 
 // dumpwallet "filename"
-function dumpwallet(rpc) {
+export function dumpwallet(rpc) {
     return new Promise((resolve, reject) => {
         rpc.dumpwallet().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -48,10 +48,10 @@ function dumpwallet(rpc) {
 }
 
 // encryptwallet "passphrase"
-function encryptwallet(rpc) {
+export function encryptwallet(rpc) {
     return new Promise((resolve, reject) => {
         rpc.encryptwallet().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -60,10 +60,10 @@ function encryptwallet(rpc) {
 }
 
 // getaccount "KMD_address"
-function getaccount(rpc) {
+export function getaccount(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaccount().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -72,10 +72,10 @@ function getaccount(rpc) {
 }
 
 // getaccountaddress "account"
-function getaccountaddress(rpc) {
+export function getaccountaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaccountaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -84,10 +84,10 @@ function getaccountaddress(rpc) {
 }
 
 // getaddressesbyaccount "account"
-function getaddressesbyaccount(rpc) {
+export function getaddressesbyaccount(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressesbyaccount().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -96,10 +96,10 @@ function getaddressesbyaccount(rpc) {
 }
 
 // getbalance ( "account" minconf includeWatchonly )
-function getbalance(rpc) {
+export function getbalance(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getbalance().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -108,10 +108,10 @@ function getbalance(rpc) {
 }
 
 // getbalance64
-function getbalance64(rpc) {
+export function getbalance64(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getbalance64().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -120,10 +120,10 @@ function getbalance64(rpc) {
 }
 
 // getnewaddress ( "account" )
-function getnewaddress(rpc) {
+export function getnewaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getnewaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -132,10 +132,10 @@ function getnewaddress(rpc) {
 }
 
 // getrawchangeaddress
-function getrawchangeaddress(rpc) {
+export function getrawchangeaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getrawchangeaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -144,10 +144,10 @@ function getrawchangeaddress(rpc) {
 }
 
 // getreceivedbyaccount "account" ( minconf )
-function getreceivedbyaccount(rpc) {
+export function getreceivedbyaccount(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getreceivedbyaccount().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -156,10 +156,10 @@ function getreceivedbyaccount(rpc) {
 }
 
 // getreceivedbyaddress "KMD_address" ( minconf )
-function getreceivedbyaddress(rpc) {
+export function getreceivedbyaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getreceivedbyaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -168,10 +168,10 @@ function getreceivedbyaddress(rpc) {
 }
 
 // gettransaction "txid" ( includeWatchonly )
-function gettransaction(rpc) {
+export function gettransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.gettransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -180,10 +180,10 @@ function gettransaction(rpc) {
 }
 
 // getunconfirmedbalance
-function getunconfirmedbalance(rpc) {
+export function getunconfirmedbalance(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getunconfirmedbalance().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -192,10 +192,10 @@ function getunconfirmedbalance(rpc) {
 }
 
 // getwalletinfo
-function getwalletinfo(rpc) {
+export function getwalletinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getwalletinfo().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -204,10 +204,10 @@ function getwalletinfo(rpc) {
 }
 
 // importaddress "address" ( "label" rescan )
-function importaddress(rpc) {
+export function importaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.importaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -216,10 +216,10 @@ function importaddress(rpc) {
 }
 
 // importprivkey "komodoprivkey" ( "label" rescan )
-function importprivkey(rpc) {
+export function importprivkey(rpc) {
     return new Promise((resolve, reject) => {
         rpc.importprivkey().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -228,10 +228,10 @@ function importprivkey(rpc) {
 }
 
 // importwallet "filename"
-function importwallet(rpc) {
+export function importwallet(rpc) {
     return new Promise((resolve, reject) => {
         rpc.importwallet().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -240,10 +240,10 @@ function importwallet(rpc) {
 }
 
 // keypoolrefill ( newsize )
-function keypoolrefill(rpc) {
+export function keypoolrefill(rpc) {
     return new Promise((resolve, reject) => {
         rpc.keypoolrefill().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -252,10 +252,10 @@ function keypoolrefill(rpc) {
 }
 
 // listaccounts ( minconf includeWatchonly)
-function listaccounts(rpc) {
+export function listaccounts(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listaccounts().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -264,10 +264,10 @@ function listaccounts(rpc) {
 }
 
 // listaddressgroupings
-function listaddressgroupings(rpc) {
+export function listaddressgroupings(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listaddressgroupings().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -276,10 +276,10 @@ function listaddressgroupings(rpc) {
 }
 
 // listlockunspent
-function listlockunspent(rpc) {
+export function listlockunspent(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listlockunspent().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -288,10 +288,10 @@ function listlockunspent(rpc) {
 }
 
 // listreceivedbyaccount ( minconf includeempty includeWatchonly)
-function listreceivedbyaccount(rpc) {
+export function listreceivedbyaccount(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listreceivedbyaccount().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -300,10 +300,10 @@ function listreceivedbyaccount(rpc) {
 }
 
 // listreceivedbyaddress ( minconf includeempty includeWatchonly)
-function listreceivedbyaddress(rpc) {
+export function listreceivedbyaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listreceivedbyaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -312,10 +312,10 @@ function listreceivedbyaddress(rpc) {
 }
 
 // listsinceblock ( "blockhash" target-confirmations includeWatchonly)
-function listsinceblock(rpc) {
+export function listsinceblock(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listsinceblock().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -324,10 +324,10 @@ function listsinceblock(rpc) {
 }
 
 // listtransactions ( "account" count from includeWatchonly)
-function listtransactions(rpc) {
+export function listtransactions(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listtransactions().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -336,10 +336,10 @@ function listtransactions(rpc) {
 }
 
 // listunspent ( minconf maxconf  ["address",...] )
-function listunspent(rpc) {
+export function listunspent(rpc) {
     return new Promise((resolve, reject) => {
         rpc.listunspent().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -348,10 +348,10 @@ function listunspent(rpc) {
 }
 
 // lockunspent unlock [{"txid":"txid","vout":n},...]
-function lockunspent(rpc) {
+export function lockunspent(rpc) {
     return new Promise((resolve, reject) => {
         rpc.lockunspent().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -360,10 +360,10 @@ function lockunspent(rpc) {
 }
 
 // move "fromaccount" "toaccount" amount ( minconf "comment" )
-function move(rpc) {
+export function move(rpc) {
     return new Promise((resolve, reject) => {
         rpc.move().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -372,10 +372,10 @@ function move(rpc) {
 }
 
 // resendwallettransactions
-function resendwallettransactions(rpc) {
+export function resendwallettransactions(rpc) {
     return new Promise((resolve, reject) => {
         rpc.resendwallettransactions().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -384,10 +384,10 @@ function resendwallettransactions(rpc) {
 }
 
 // sendfrom "fromaccount" "toKMDaddress" amount ( minconf "comment" "comment-to" )
-function sendfrom(rpc) {
+export function sendfrom(rpc) {
     return new Promise((resolve, reject) => {
         rpc.sendfrom().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -396,10 +396,10 @@ function sendfrom(rpc) {
 }
 
 // sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
-function sendmany(rpc) {
+export function sendmany(rpc) {
     return new Promise((resolve, reject) => {
         rpc.sendmany().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -408,10 +408,10 @@ function sendmany(rpc) {
 }
 
 // sendtoaddress "KMD_address" amount ( "comment" "comment-to" subtractfeefromamount )
-function sendtoaddress(rpc) {
+export function sendtoaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.sendtoaddress(address, amount).then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -420,10 +420,10 @@ function sendtoaddress(rpc) {
 }
 
 // setaccount "KMD_address" "account"
-function setaccount(rpc) {
+export function setaccount(rpc) {
     return new Promise((resolve, reject) => {
         rpc.setaccount().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -432,10 +432,10 @@ function setaccount(rpc) {
 }
 
 // settxfee amount
-function settxfee(rpc) {
+export function settxfee(rpc) {
     return new Promise((resolve, reject) => {
         rpc.settxfee().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -444,10 +444,10 @@ function settxfee(rpc) {
 }
 
 // signmessage "KMD address" "message"
-function signmessage(rpc) {
+export function signmessage(rpc) {
     return new Promise((resolve, reject) => {
         rpc.signmessage().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -456,10 +456,10 @@ function signmessage(rpc) {
 }
 
 // z_exportkey "zaddr"
-function z_exportkey(rpc) {
+export function z_exportkey(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_exportkey().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -468,10 +468,10 @@ function z_exportkey(rpc) {
 }
 
 // z_exportviewingkey "zaddr"
-function z_exportviewingkey(rpc) {
+export function z_exportviewingkey(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_exportviewingkey().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -480,10 +480,10 @@ function z_exportviewingkey(rpc) {
 }
 
 // z_exportwallet "filename"
-function z_exportwallet(rpc) {
+export function z_exportwallet(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_exportwallet().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -492,10 +492,10 @@ function z_exportwallet(rpc) {
 }
 
 // z_getbalance "address" ( minconf )
-function z_getbalance(rpc) {
+export function z_getbalance(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_getbalance().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -504,10 +504,10 @@ function z_getbalance(rpc) {
 }
 
 // z_getnewaddress
-function z_getnewaddress(rpc) {
+export function z_getnewaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_getnewaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -516,10 +516,10 @@ function z_getnewaddress(rpc) {
 }
 
 // z_getoperationresult (["operationid", ... ]) 
-function z_getoperationresult(rpc) {
+export function z_getoperationresult(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_getoperationresult().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -528,10 +528,10 @@ function z_getoperationresult(rpc) {
 }
 
 // z_getoperationstatus (["operationid", ... ]) 
-function z_getoperationstatus(rpc) {
+export function z_getoperationstatus(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_getoperationstatus().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -540,10 +540,10 @@ function z_getoperationstatus(rpc) {
 }
 
 // z_gettotalbalance ( minconf includeWatchonly )
-function z_gettotalbalance(rpc) {
+export function z_gettotalbalance(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_gettotalbalance().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -552,10 +552,10 @@ function z_gettotalbalance(rpc) {
 }
 
 // z_importkey "zkey" ( rescan startHeight )
-function z_importkey(rpc) {
+export function z_importkey(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_importkey().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -564,10 +564,10 @@ function z_importkey(rpc) {
 }
 
 // z_importviewingkey "vkey" ( rescan startHeight )
-function z_importviewingkey(rpc) {
+export function z_importviewingkey(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_importviewingkey().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -576,10 +576,10 @@ function z_importviewingkey(rpc) {
 }
 
 // z_importwallet "filename"
-function z_importwallet(rpc) {
+export function z_importwallet(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_importwallet().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -588,10 +588,10 @@ function z_importwallet(rpc) {
 }
 
 // z_listaddresses ( includeWatchonly )
-function z_listaddresses(rpc) {
+export function z_listaddresses(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_listaddresses().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -600,10 +600,10 @@ function z_listaddresses(rpc) {
 }
 
 // z_listoperationids
-function z_listoperationids(rpc) {
+export function z_listoperationids(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_listoperationids().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -612,10 +612,10 @@ function z_listoperationids(rpc) {
 }
 
 // z_listreceivedbyaddress "address" ( minconf )
-function z_listreceivedbyaddress(rpc) {
+export function z_listreceivedbyaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_listreceivedbyaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -624,10 +624,10 @@ function z_listreceivedbyaddress(rpc) {
 }
 
 // z_mergetoaddress ["fromaddress", ... ] "toaddress" ( fee ) ( transparent_limit ) ( shielded_limit ) ( memo )
-function z_mergetoaddress(rpc) {
+export function z_mergetoaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_mergetoaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -636,10 +636,10 @@ function z_mergetoaddress(rpc) {
 }
 
 // z_sendmany "fromaddress" [{"address":... ,"amount":...},...] ( minconf ) ( fee )
-function z_sendmany(rpc) {
+export function z_sendmany(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_sendmany().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -648,10 +648,10 @@ function z_sendmany(rpc) {
 }
 
 // z_shieldcoinbase "fromaddress" "tozaddress" ( fee ) ( limit )
-function z_shieldcoinbase(rpc) {
+export function z_shieldcoinbase(rpc) {
     return new Promise((resolve, reject) => {
         rpc.z_shieldcoinbase().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -660,10 +660,10 @@ function z_shieldcoinbase(rpc) {
 }
 
 // zcbenchmark benchmarktype samplecount
-function zcbenchmark(rpc) {
+export function zcbenchmark(rpc) {
     return new Promise((resolve, reject) => {
         rpc.zcbenchmark().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -672,10 +672,10 @@ function zcbenchmark(rpc) {
 }
 
 // zcrawjoinsplit rawtx inputs outputs vpub_old vpub_new
-function zcrawjoinsplit(rpc) {
+export function zcrawjoinsplit(rpc) {
     return new Promise((resolve, reject) => {
         rpc.zcrawjoinsplit().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -684,10 +684,10 @@ function zcrawjoinsplit(rpc) {
 }
 
 // zcrawkeygen
-function zcrawkeygen(rpc) {
+export function zcrawkeygen(rpc) {
     return new Promise((resolve, reject) => {
         rpc.zcrawkeygen().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -696,10 +696,10 @@ function zcrawkeygen(rpc) {
 }
 
 // zcrawreceive zcsecretkey encryptednote
-function zcrawreceive(rpc) {
+export function zcrawreceive(rpc) {
     return new Promise((resolve, reject) => {
         rpc.zcrawreceive().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -708,10 +708,10 @@ function zcrawreceive(rpc) {
 }
 
 // zcsamplejoinsplit
-function zcsamplejoinsplit(rpc) {
+export function zcsamplejoinsplit(rpc) {
     return new Promise((resolve, reject) => {
         rpc.zcsamplejoinsplit().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -720,7 +720,7 @@ function zcsamplejoinsplit(rpc) {
 }
 
 
-export {
+export default {
     addmultisigaddress,
     backupwallet,
     dumpprivkey,

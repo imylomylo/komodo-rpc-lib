@@ -1,9 +1,9 @@
 // == Dice ==
 // diceaddfunds name fundingtxid amount
-function diceaddfunds(rpc) {
+export function diceaddfunds(rpc) {
     return new Promise((resolve, reject) => {
         rpc.diceaddfunds().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -13,10 +13,10 @@ function diceaddfunds(rpc) {
 
 
 // diceaddress [pubkey]
-function diceaddress(rpc) {
+export function diceaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.diceaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -26,10 +26,10 @@ function diceaddress(rpc) {
 
 
 // dicebet name fundingtxid amount odds
-function dicebet(rpc) {
+export function dicebet(rpc) {
     return new Promise((resolve, reject) => {
         rpc.dicebet().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -39,10 +39,10 @@ function dicebet(rpc) {
 
 
 // dicefinish name fundingtxid bettxid
-function dicefinish(rpc) {
+export function dicefinish(rpc) {
     return new Promise((resolve, reject) => {
         rpc.dicefinish().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -52,10 +52,10 @@ function dicefinish(rpc) {
 
 
 // dicefund name funds minbet maxbet maxodds timeoutblocks
-function dicefund(rpc) {
+export function dicefund(rpc) {
     return new Promise((resolve, reject) => {
         rpc.dicefund().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -65,10 +65,10 @@ function dicefund(rpc) {
 
 
 // diceinfo fundingtxid
-function diceinfo(rpc) {
+export function diceinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.diceinfo().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -78,10 +78,10 @@ function diceinfo(rpc) {
 
 
 // dicelist
-function dicelist(rpc) {
+export function dicelist(rpc) {
     return new Promise((resolve, reject) => {
         rpc.dicelist().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -91,10 +91,10 @@ function dicelist(rpc) {
 
 
 // dicestatus name fundingtxid bettxid
-function dicestatus(rpc) {
+export function dicestatus(rpc) {
     return new Promise((resolve, reject) => {
         rpc.dicestatus().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -102,7 +102,7 @@ function dicestatus(rpc) {
     })
 }
 
-export {
+export default {
     diceaddfunds,
     diceaddress,
     dicebet,

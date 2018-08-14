@@ -1,9 +1,9 @@
 // == Addressindex ==
 // getaddressbalance
-function getaddressbalance(rpc) {
+export function getaddressbalance(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressbalance().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -12,10 +12,10 @@ function getaddressbalance(rpc) {
 }
 
 // getaddressdeltas
-function getaddressdeltas(rpc) {
+export function getaddressdeltas(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressdeltas().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -24,10 +24,10 @@ function getaddressdeltas(rpc) {
 }
 
 // getaddressmempool
-function getaddressmempool(rpc) {
+export function getaddressmempool(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressmempool().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -35,10 +35,10 @@ function getaddressmempool(rpc) {
     })
 }
 // getaddresstxids
-function getaddresstxids(rpc) {
+export function getaddresstxids(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddresstxids().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -46,10 +46,10 @@ function getaddresstxids(rpc) {
     })
 }
 // getaddressutxos
-function getaddressutxos(rpc) {
+export function getaddressutxos(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressutxos().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -57,10 +57,10 @@ function getaddressutxos(rpc) {
     })
 }
 // getsnapshot
-function getsnapshot(rpc) {
+export function getsnapshot(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getsnapshot().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -68,7 +68,7 @@ function getsnapshot(rpc) {
     })
 }
 
-export {
+export default {
     getaddressbalance,
     getaddressdeltas,
     getaddressmempool,

@@ -1,9 +1,9 @@
 // == Rawtransactions ==
 // createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,...}
-function createrawtransaction(rpc) {
+export function createrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.createrawtransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -12,10 +12,10 @@ function createrawtransaction(rpc) {
 }
 
 // decoderawtransaction "hexstring"
-function decoderawtransaction(rpc) {
+export function decoderawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.decoderawtransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -24,10 +24,10 @@ function decoderawtransaction(rpc) {
 }
 
 // decodescript "hex"
-function decodescript(rpc) {
+export function decodescript(rpc) {
     return new Promise((resolve, reject) => {
         rpc.decodescript().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -36,10 +36,10 @@ function decodescript(rpc) {
 }
 
 // fundrawtransaction "hexstring"
-function fundrawtransaction(rpc) {
+export function fundrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.fundrawtransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -48,10 +48,10 @@ function fundrawtransaction(rpc) {
 }
 
 // getrawtransaction "txid" ( verbose )
-function getrawtransaction(rpc) {
+export function getrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getrawtransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -60,10 +60,10 @@ function getrawtransaction(rpc) {
 }
 
 // sendrawtransaction "hexstring" ( allowhighfees )
-function sendrawtransaction(rpc) {
+export function sendrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.sendrawtransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -72,10 +72,10 @@ function sendrawtransaction(rpc) {
 }
 
 // signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
-function signrawtransaction(rpc) {
+export function signrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         rpc.signrawtransaction().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -83,7 +83,7 @@ function signrawtransaction(rpc) {
     })
 }
 
-export {
+export default {
     createrawtransaction,
     decoderawtransaction,
     decodescript,

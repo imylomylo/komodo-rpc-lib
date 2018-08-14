@@ -1,9 +1,9 @@
 // == Lotto ==
 // lottoaddress [pubkey]
-function lottoaddress(rpc) {
+export function lottoaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.lottoaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -11,6 +11,6 @@ function lottoaddress(rpc) {
     })
 }
 
-export {
+export default {
     lottoaddress
 }

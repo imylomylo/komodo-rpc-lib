@@ -1,9 +1,9 @@
 // == FSM ==
 // FSMaddress [pubkey]
-function FSMaddress(rpc) {
+export function FSMaddress(rpc) {
     return new Promise((resolve, reject) => {
         rpc.FSMaddress().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -14,10 +14,10 @@ function FSMaddress(rpc) {
 
 // == FSMcreate ==
 // FSMcreate name states
-function FSMcreate(rpc) {
+export function FSMcreate(rpc) {
     return new Promise((resolve, reject) => {
         rpc.FSMcreate().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -28,10 +28,10 @@ function FSMcreate(rpc) {
 
 // == FSMinfo ==
 // FSMinfo fundingtxid
-function FSMinfo(rpc) {
+export function FSMinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.FSMinfo().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -42,10 +42,10 @@ function FSMinfo(rpc) {
 
 // == FSMlist ==
 // FSMlist
-function FSMlist(rpc) {
+export function FSMlist(rpc) {
     return new Promise((resolve, reject) => {
         rpc.FSMlist().then(resp => {
-            return resolve(resp)
+            resolve(resp)
         }).catch(error => {
             console.log(error)
             reject(error)
@@ -53,7 +53,7 @@ function FSMlist(rpc) {
     })
 }
 
-export {
+export default {
     FSMaddress,
     FSMcreate,
     FSMinfo,
