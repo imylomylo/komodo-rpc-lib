@@ -1,3 +1,5 @@
+import stdrpc from 'stdrpc'
+
 export function connect(url, username, password) {
     console.log("Connecting to " + url)
     const rpc = stdrpc({
@@ -12,7 +14,7 @@ export function connect(url, username, password) {
 export function getinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getinfo().then(resp => {
-            // console.log(resp)
+            console.log(resp)
             resolve(resp)
         }).catch(error => {
             console.log(error)
