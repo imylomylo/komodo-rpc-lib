@@ -1,13 +1,27 @@
 import kmdrpc from './src/kmdrpc'
 import control, { connect, stop } from './src/control'
+import wallet from './src/wallet'
+import rawtransactions from './src/rawtransactions'
 
 // get the connection object configured and ready
 const rpc = connect("http://127.0.0.1:7771","user","pass")
 
-// pass the configured rpc connection and fire it off
-control.getinfo(rpc).then(resp => {
+// // pass the configured rpc connection and fire it off
+// control.getinfo(rpc).then(resp => {
+//     console.log(resp)
+// }).catch(function (error){
+//     console.log(error)
+// })
+
+wallet.listaccounts(rpc).then(resp => {
     console.log(resp)
 }).catch(function (error){
+    console.log(error)
+})
+
+rawtransactions.decodescript(rpc).then(resp =>{
+    console.log(resp)
+}).catch(error => {
     console.log(error)
 })
 
