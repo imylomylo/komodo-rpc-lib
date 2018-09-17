@@ -2,12 +2,13 @@
 // coinsupply <height>
 export function coinsupply(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.coinsupply().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.coinsupply().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("coinsupply - Not supported yet")
     })
 }
 
@@ -24,9 +25,9 @@ export function getbestblockhash(rpc) {
 }
 
 // getblock "hash|height" ( verbose )
-export function getblock(rpc) {
+export function getblock(rpc, hash_or_height) {
     return new Promise((resolve, reject) => {
-        rpc.getblock().then(resp => {
+        rpc.getblock(hash_or_height).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)
@@ -60,9 +61,9 @@ export function getblockcount(rpc) {
 }
 
 // getblockhash index
-export function getblockhash(rpc) {
+export function getblockhash(rpc, index) {
     return new Promise((resolve, reject) => {
-        rpc.getblockhash().then(resp => {
+        rpc.getblockhash(index).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)
@@ -72,9 +73,9 @@ export function getblockhash(rpc) {
 }
 
 // getblockhashes timestamp
-export function getblockhashes(rpc) {
+export function getblockhashes(rpc,timestamp) {
     return new Promise((resolve, reject) => {
-        rpc.getblockhashes().then(resp => {
+        rpc.getblockhashes(timestamp).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)
@@ -84,9 +85,9 @@ export function getblockhashes(rpc) {
 }
 
 // getblockheader "hash" ( verbose )
-export function getblockheader(rpc) {
+export function getblockheader(rpc, hash, verbose = 0) {
     return new Promise((resolve, reject) => {
-        rpc.getblockheader().then(resp => {
+        rpc.getblockheader(hash, verbose).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)
@@ -132,9 +133,9 @@ export function getmempoolinfo(rpc) {
 }
 
 // getrawmempool ( verbose )
-export function getrawmempool(rpc) {
+export function getrawmempool(rpc, verbose = 0) {
     return new Promise((resolve, reject) => {
-        rpc.getrawmempool().then(resp => {
+        rpc.getrawmempool(verbose).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)
@@ -158,24 +159,26 @@ export function getspentinfo(rpc) {
 // gettxout "txid" n ( includemempool )
 export function gettxout(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.gettxout().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.gettxout().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("gettxout - Not supported yet")
     })
 }
 
 // gettxoutproof ["txid",...] ( blockhash )
 export function gettxoutproof(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.gettxoutproof().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.gettxoutproof().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("gettxoutproof - Not supported yet")
     })
 }
 
@@ -192,9 +195,9 @@ export function gettxoutsetinfo(rpc) {
 }
 
 // kvsearch key
-export function kvsearch(rpc) {
+export function kvsearch(rpc, key) {
     return new Promise((resolve, reject) => {
-        rpc.kvsearch().then(resp => {
+        rpc.kvsearch(key).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)
@@ -206,96 +209,104 @@ export function kvsearch(rpc) {
 // kvupdate key "value" days passphrase
 export function kvupdate(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.kvupdate().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.kvupdate().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("kvupdate - Not supported yet")
     })
 }
 
 // minerids needs height
 export function minerids(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.minerids().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.minerids().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("minerids - Not supported yet")
     })
 }
 
 // notaries height timestamp
 export function notaries(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.notaries().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.notaries().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("notaries - Not supported yet")
     })
 }
 
 // paxpending needs no args
 export function paxpending(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.paxpending().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.paxpending().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("paxpending - Not supported yet")
     })
 }
 
 // paxprice "base" "rel" height
 export function paxprice(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.paxprice().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.paxprice().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("paxprice - Not supported yet")
     })
 }
 
 // paxprices "base" "rel" maxsamples
 export function paxprices(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.paxprices().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.paxprices().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("paxprices - Not supported yet")
     })
 }
 
 // verifychain ( checklevel numblocks )
 export function verifychain(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.verifychain().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.verifychain().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("verifychain - Not supported yet")
     })
 }
 
 // verifytxoutproof "proof"
 export function verifytxoutproof(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.verifytxoutproof().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.verifytxoutproof().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("verifytxoutproof - Not supported yet")
     })
 }
 

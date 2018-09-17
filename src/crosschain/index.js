@@ -2,12 +2,13 @@
 // MoMoMdata symbol kmdheight ccid
 export function MoMoMdata(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.MoMoMdata().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.MoMoMdata().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("MoMoMdata - Not supported yet")
     })
 }
 
@@ -15,12 +16,13 @@ export function MoMoMdata(rpc) {
 // assetchainproof needs a txid
 export function assetchainproof(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.assetchainproof().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.assetchainproof().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("assetchainproof - Not supported yet")
     })
 }
 
@@ -28,12 +30,13 @@ export function assetchainproof(rpc) {
 // calc_MoM height MoMdepth
 export function calc_MoM(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.calc_MoM().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.calc_MoM().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("calc_MoM - Not supported yet")
     })
 }
 
@@ -41,12 +44,13 @@ export function calc_MoM(rpc) {
 // height_MoM height
 export function height_MoM(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.height_MoM().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.height_MoM().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("height_MoM - Not supported yet")
     })
 }
 
@@ -54,12 +58,13 @@ export function height_MoM(rpc) {
 // migrate_completeimporttransaction importTx
 export function migrate_completeimporttransaction(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.migrate_completeimporttransaction().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.migrate_completeimporttransaction().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("migrate_completeimporttransaction - Not supported yet")
     })
 }
 
@@ -67,12 +72,13 @@ export function migrate_completeimporttransaction(rpc) {
 // migrate_converttoexport rawTx dest_symbol export_amount
 export function migrate_converttoexport(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.migrate_converttoexport().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.migrate_converttoexport().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("migrate_converttoexport - Not supported yet")
     })
 }
 
@@ -80,12 +86,13 @@ export function migrate_converttoexport(rpc) {
 // migrate_createimporttransaction burnTx payouts
 export function migrate_createimporttransaction(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.migrate_createimporttransaction().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.migrate_createimporttransaction().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("migrate_createimporttransaction - Not supported yet")
     })
 }
 

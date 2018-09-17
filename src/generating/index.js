@@ -1,8 +1,8 @@
 // == Generating ==
 // generate numblocks
-export function generate(rpc) {
+export function generate(rpc, numblocks) {
     return new Promise((resolve, reject) => {
-        rpc.generate().then(resp => {
+        rpc.generate(numblocks).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)
@@ -24,9 +24,9 @@ export function getgenerate(rpc) {
 }
 
 // setgenerate generate ( genproclimit )
-export function setgenerate(rpc) {
+export function setgenerate(rpc, genproclimit) {
     return new Promise((resolve, reject) => {
-        rpc.setgenerate().then(resp => {
+        rpc.setgenerate(genproclimit).then(resp => {
             resolve(resp)
         }).catch(error => {
             console.log(error)

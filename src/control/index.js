@@ -24,9 +24,9 @@ export function getinfo(rpc) {
 }
 
 // help ( "command" )
-export function help(rpc) {
+export function help(rpc, command = '') {
     return new Promise((resolve, reject) => {
-        rpc.help().then(resp => {
+        rpc.help(command).then(resp => {
             console.log(resp)
             resolve(resp)
         }).catch(error => {

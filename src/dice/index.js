@@ -2,12 +2,13 @@
 // diceaddfunds name fundingtxid amount
 export function diceaddfunds(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.diceaddfunds().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.diceaddfunds().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("diceaddfunds - Not supported yet")
     })
 }
 
@@ -15,12 +16,13 @@ export function diceaddfunds(rpc) {
 // diceaddress [pubkey]
 export function diceaddress(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.diceaddress().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.diceaddress().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("diceaddress - Not supported yet")
     })
 }
 
@@ -28,12 +30,13 @@ export function diceaddress(rpc) {
 // dicebet name fundingtxid amount odds
 export function dicebet(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.dicebet().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.dicebet().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("dicebet - Not supported yet")
     })
 }
 
@@ -41,12 +44,13 @@ export function dicebet(rpc) {
 // dicefinish name fundingtxid bettxid
 export function dicefinish(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.dicefinish().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.dicefinish().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("dicefinish - Not supported yet")
     })
 }
 
@@ -54,12 +58,13 @@ export function dicefinish(rpc) {
 // dicefund name funds minbet maxbet maxodds timeoutblocks
 export function dicefund(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.dicefund().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.dicefund().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("dicefund - Not supported yet")
     })
 }
 
@@ -67,12 +72,13 @@ export function dicefund(rpc) {
 // diceinfo fundingtxid
 export function diceinfo(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.diceinfo().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.diceinfo().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("diceinfo - Not supported yet")
     })
 }
 
@@ -80,12 +86,13 @@ export function diceinfo(rpc) {
 // dicelist
 export function dicelist(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.dicelist().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.dicelist().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("dicelist - Not supported yet")
     })
 }
 
@@ -93,12 +100,13 @@ export function dicelist(rpc) {
 // dicestatus name fundingtxid bettxid
 export function dicestatus(rpc) {
     return new Promise((resolve, reject) => {
-        rpc.dicestatus().then(resp => {
-            resolve(resp)
-        }).catch(error => {
-            console.log(error)
-            reject(error)
-        })
+        // rpc.dicestatus().then(resp => {
+        //     resolve(resp)
+        // }).catch(error => {
+        //     console.log(error)
+        //     reject(error)
+        // })
+        reject("dicestatus - Not supported yet")
     })
 }
 
