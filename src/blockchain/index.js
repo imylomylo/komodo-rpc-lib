@@ -12,7 +12,17 @@ export function coinsupply(rpc) {
     })
 }
 
-// getbestblockhash
+/**
+ * @api {post} / getbestblockhash
+ * @apiName getbestblockhash
+ * @apiGroup blockchain
+ * @apiDescription get best hash of block
+ * @apiSampleRequest http://localhost:7771/
+ *
+ * @apiParam {Object} rpc the object configured using control.connect(url,username,password)
+ *
+ * @apiSuccess {Object} resp returns json object of daemon info
+ */
 export function getbestblockhash(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getbestblockhash().then(resp => {
@@ -25,6 +35,18 @@ export function getbestblockhash(rpc) {
 }
 
 // getblock "hash|height" ( verbose )
+/**
+ * @api {post} / getblock
+ * @apiName getblock
+ * @apiGroup blockchain
+ * @apiDescription get block at specified hash or height
+ * @apiSampleRequest http://localhost:7771/
+ *
+ * @apiParam {Object} rpc the object configured using control.connect(url,username,password)
+ * @apiParam {String} hash_or_height the hash|height of the block to be retrieved
+ *
+ * @apiSuccess {Object} resp returns json object of daemon info
+ */
 export function getblock(rpc, hash_or_height) {
     return new Promise((resolve, reject) => {
         rpc.getblock(hash_or_height).then(resp => {

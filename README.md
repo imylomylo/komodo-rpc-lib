@@ -36,3 +36,9 @@ and then
 cd dist2
 node index.js
 ```
+
+Making the docs
+```
+ sudo npm install -g apidoc
+ apidoc -i src/ -o apidoc/
+```

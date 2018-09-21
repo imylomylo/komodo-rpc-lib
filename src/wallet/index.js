@@ -207,16 +207,25 @@ export function getunconfirmedbalance(rpc) {
     })
 }
 
-// getwalletinfo
+/**
+ * @api {post} / getwalletinfo
+ * @apiName getwalletinfo
+ * @apiGroup wallet
+ * @apiDescription get wallet info
+ * @apiSampleRequest http://localhost:7771/
+ *
+ * @apiParam {Object} rpc the object configured using control.connect(url,username,password)
+ *
+ * @apiSuccess {Object} resp returns json object of daemon info
+ */
 export function getwalletinfo(rpc) {
     return new Promise((resolve, reject) => {
-        // rpc.getwalletinfo().then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("getwalletinfo - Not supported yet")
+        rpc.getwalletinfo().then(resp => {
+            resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
     })
 }
 

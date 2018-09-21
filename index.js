@@ -2,8 +2,11 @@ import kmdrpc from './src/kmdrpc'
 import control, { connect, stop } from './src/control'
 import wallet from './src/wallet'
 import rawtransactions from './src/rawtransactions'
+import faucet from './src/faucet'
+import generating from './src/generating'
 
 // get the connection object configured and ready
+// default komodod port
 const rpc = connect("http://127.0.0.1:7771","user","pass")
 
 // // pass the configured rpc connection and fire it off
@@ -13,17 +16,35 @@ const rpc = connect("http://127.0.0.1:7771","user","pass")
 //     console.log(error)
 // })
 
-wallet.listaccounts(rpc).then(resp => {
+// wallet.listaccounts(rpc).then(resp => {
+//     console.log(resp)
+// }).catch(function (error){
+//     console.log(error)
+// })
+
+faucet.faucetinfo(rpc).then(resp => {
     console.log(resp)
 }).catch(function (error){
     console.log(error)
 })
 
-rawtransactions.decodescript(rpc).then(resp =>{
+generating.generate(rpc,5).then(resp => {
     console.log(resp)
 }).catch(error => {
     console.log(error)
 })
+
+// faucet.faucetaddress(rpc, '03F6B7FCAF0B8B8EC432D0DE839A76598B78418DADD50C8E5594C0E557D914EC09').then(resp => {
+//     console.log(resp)
+// }).catch(function (error){
+//     console.log(error)
+// })
+
+// rawtransactions.decodescript(rpc).then(resp =>{
+//     console.log(resp)
+// }).catch(error => {
+//     console.log(error)
+// })
 
 // control.stop(rpc).then(displayResponse)
 // TEST KEY

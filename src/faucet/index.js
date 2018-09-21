@@ -1,14 +1,14 @@
 // == Faucet ==
 // faucetaddress [pubkey]
-export function faucetaddress(rpc) {
+export function faucetaddress(rpc, pubkey) {
     return new Promise((resolve, reject) => {
-        // rpc.faucetaddress().then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("faucetaddress - Not supported yet")
+        rpc.faucetaddress(pubkey).then(resp => {
+            resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+        // reject("faucetaddress - Not supported yet")
     })
 }
 
@@ -44,13 +44,13 @@ export function faucetget(rpc) {
 // faucetinfo
 export function faucetinfo(rpc) {
     return new Promise((resolve, reject) => {
-        // rpc.faucetinfo().then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("faucetinfo - Not supported yet")
+        rpc.faucetinfo().then(resp => {
+            resolve(resp)
+        }).catch(error => {
+            console.log(error)
+            reject(error)
+        })
+        // reject("faucetinfo - Not supported yet")
     })
 }
 
