@@ -1,8 +1,9 @@
 {
   "name": "komodo-rpc-lib",
-  "version": "0.0.3",
+  "version": "0.0.10",
   "description": "An rpc wrapper for working with komodo blockchain tech",
-  "main": "src/index.js",
+  "main": "./dist/src/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "rimraf": "^2.7.1"
   }
