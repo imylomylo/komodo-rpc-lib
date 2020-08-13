@@ -1,3 +1,6 @@
+Warning:  This is an es6 module project that was used in a web project for a proof of concept.  It's not maintained at the moment. For NodeJS better to use @gcharang library. A lot more lightweight and supported.
+
+
 Warning:  error handling not completed.
 
 Functions look like this when not implemented.  If you happen to know what you want to do, remove the reject line, uncomment the remaining code inside the promise and implement yourself.  Submit a PR if you could be so kind :)
