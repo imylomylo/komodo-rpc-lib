@@ -451,15 +451,15 @@ export function sendmany(rpc) {
 }
 
 // sendtoaddress "KMD_address" amount ( "comment" "comment-to" subtractfeefromamount )
-export function sendtoaddress(rpc) {
+export function sendtoaddress(rpc, address="", amount=0) {
     return new Promise((resolve, reject) => {
-        // rpc.sendtoaddress(address, amount).then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("sendtoaddress - Not supported yet")
+         rpc.sendtoaddress(address, amount).then(resp => {
+             resolve(resp)
+         }).catch(error => {
+             //console.log(error.response.data)
+             reject(error.response.data)
+         })
+        //reject("sendtoaddress - Not supported yet")
     })
 }
 
@@ -567,7 +567,7 @@ export function z_getnewaddress(rpc) {
     })
 }
 
-// z_getoperationresult (["operationid", ... ]) 
+// z_getoperationresult (["operationid", ... ])
 export function z_getoperationresult(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_getoperationresult().then(resp => {
@@ -580,7 +580,7 @@ export function z_getoperationresult(rpc) {
     })
 }
 
-// z_getoperationstatus (["operationid", ... ]) 
+// z_getoperationstatus (["operationid", ... ])
 export function z_getoperationstatus(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_getoperationstatus().then(resp => {
@@ -698,15 +698,15 @@ export function z_mergetoaddress(rpc) {
 }
 
 // z_sendmany "fromaddress" [{"address":... ,"amount":...},...] ( minconf ) ( fee )
-export function z_sendmany(rpc) {
+export function z_sendmany(rpc, fromAddress, params) {
     return new Promise((resolve, reject) => {
-        // rpc.z_sendmany().then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("z_sendmany - Not supported yet")
+         rpc.z_sendmany(fromAddress, params).then(resp => {
+             resolve(resp)
+         }).catch(error => {
+             console.log(error.response.data)
+             reject(error.response.data)
+         })
+        //reject("z_sendmany - Not supported yet")
     })
 }
 
@@ -787,6 +787,8 @@ export function zcsamplejoinsplit(rpc) {
         reject("zcsamplejoinsplit - Not supported yet")
     })
 }
+
+
 
 
 export default {
