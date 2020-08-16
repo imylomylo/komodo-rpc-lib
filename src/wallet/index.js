@@ -132,13 +132,13 @@ export function getbalance64(rpc) {
 // getnewaddress ( "account" )
 export function getnewaddress(rpc) {
     return new Promise((resolve, reject) => {
-        // rpc.getnewaddress().then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("getnewaddress - Not supported yet")
+         rpc.getnewaddress().then(resp => {
+             resolve(resp)
+         }).catch(error => {
+             console.log(error.response.data)
+             reject(error.response.data)
+         })
+        //reject("getnewaddress - Not supported yet")
     })
 }
 

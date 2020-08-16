@@ -1,6 +1,7 @@
 import kmdrpc from './src/kmdrpc'
 import control, { connect, stop } from './src/control'
 import wallet from './src/wallet'
+import util from './src/util'
 import rawtransactions from './src/rawtransactions'
 import faucet from './src/faucet'
 import generating from './src/generating'
@@ -32,13 +33,27 @@ const rpc = connect("http://127.0.0.1:8096", rpcuser,password)
  });
 */
 
- wallet.z_sendmany(rpc,"RBtNBJjWKVKPFG4To5Yce9TWWmc2AenzfZ" ,[{"address": "RBtNBJjWKVKPFG4To5Yce9TWWmc2AenzfZ", "amount": 0}] ).then( res => {
+ /*wallet.z_sendmany(rpc,"RBtNBJjWKVKPFG4To5Yce9TWWmc2AenzfZ" ,[{"address": "RBtNBJjWKVKPFG4To5Yce9TWWmc2AenzfZ", "amount": 0}] ).then( res => {
    console.log(res);
  }).catch(function(error){
    console.log(error);
- });
+ });*/
+
+ /*wallet.getnewaddress(rpc).then( res => {
+   console.log(res);
+ }).catch(function(error){
+   console.log(error);
+ });*/
+
+ /*util.validateaddress(rpc, "RBtNBJjWKVKPFG4To5Yce9TWWmc2AenzfZ").then( res => {
+   console.log(res);
+ }).catch(function(error){
+   console.log(error);
+ });*/
+
 
  /*
+
  wallet.sendtoaddress(rpc) etc.
 
  */
