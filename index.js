@@ -1,16 +1,64 @@
-import kmdrpc from './src/kmdrpc'
-import control, { connect, stop } from './src/control'
-import wallet from './src/wallet'
-import util from './src/util'
-import rawtransactions from './src/rawtransactions'
-import faucet from './src/faucet'
-import generating from './src/generating'
-
 // get the connection object configured and ready
 // default komodod port
-const rpcuser = "diesmaster";
+/*const rpcuser = "diesmaster";
 const password = "IloveDiesmaster";
 const rpc = connect("http://127.0.0.1:8096", rpcuser,password)
+*/
+
+
+import stdrpc from 'stdrpc'
+import { addressindex } from './src/addressindex'
+import { auction } from './src/auction'
+import { blockchain } from './src/blockchain'
+import { control } from './src/control'
+import { crosschain } from './src/crosschain'
+import { dice } from './src/dice'
+import { disclosure } from './src/disclosure'
+import { faucet } from './src/faucet'
+import { fsm } from './src/fsm'
+import { generating } from './src/generating'
+import { lotto } from './src/lotto'
+import { mining } from './src/mining'
+import { network } from './src/network'
+import { rawtransactions } from './src/rawtransactions'
+import { rewards } from './src/rewards'
+import { tokens } from './src/tokens'
+import { util } from './src/util'
+import { wallet } from './src/wallet'
+
+export default {
+    addressindex,
+    auction,
+    blockchain,
+    control,
+    crosschain,
+    dice,
+    disclosure,
+    faucet,
+    fsm,
+    generating,
+    lotto,
+    mining,
+    network,
+    rawtransactions,
+    rewards,
+    tokens,
+    util,
+    wallet
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // // pass the configured rpc connection and fire it off
  /*control.getinfo(rpc).then(resp => {
