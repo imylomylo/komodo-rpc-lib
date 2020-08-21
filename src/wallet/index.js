@@ -1,6 +1,6 @@
 // == Wallet ==
 // addmultisigaddress nrequired ["key",...] ( "account" )
-export function addmultisigaddress(rpc) {
+ function addmultisigaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.addmultisigaddress().then(resp => {
         //     resolve(resp)
@@ -13,7 +13,7 @@ export function addmultisigaddress(rpc) {
 }
 
 // backupwallet "destination"
-export function backupwallet(rpc) {
+ function backupwallet(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.backupwallet().then(resp => {
         //     resolve(resp)
@@ -26,7 +26,7 @@ export function backupwallet(rpc) {
 }
 
 // dumpprivkey "komodoaddress"
-export function dumpprivkey(rpc) {
+ function dumpprivkey(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.dumpprivkey().then(resp => {
         //     resolve(resp)
@@ -39,7 +39,7 @@ export function dumpprivkey(rpc) {
 }
 
 // dumpwallet "filename"
-export function dumpwallet(rpc) {
+ function dumpwallet(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.dumpwallet().then(resp => {
         //     resolve(resp)
@@ -52,7 +52,7 @@ export function dumpwallet(rpc) {
 }
 
 // encryptwallet "passphrase"
-export function encryptwallet(rpc) {
+ function encryptwallet(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.encryptwallet().then(resp => {
         //     resolve(resp)
@@ -65,7 +65,7 @@ export function encryptwallet(rpc) {
 }
 
 // getaccount "KMD_address"
-export function getaccount(rpc) {
+ function getaccount(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getaccount().then(resp => {
         //     resolve(resp)
@@ -78,7 +78,7 @@ export function getaccount(rpc) {
 }
 
 // getaccountaddress "account"
-export function getaccountaddress(rpc) {
+ function getaccountaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getaccountaddress().then(resp => {
         //     resolve(resp)
@@ -91,7 +91,7 @@ export function getaccountaddress(rpc) {
 }
 
 // getaddressesbyaccount "account"
-export function getaddressesbyaccount(rpc) {
+ function getaddressesbyaccount(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getaddressesbyaccount().then(resp => {
         //     resolve(resp)
@@ -104,7 +104,7 @@ export function getaddressesbyaccount(rpc) {
 }
 
 // getbalance ( "account" minconf includeWatchonly )
-export function getbalance(rpc) {
+ function getbalance(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getbalance().then(resp => {
         //     resolve(resp)
@@ -117,7 +117,7 @@ export function getbalance(rpc) {
 }
 
 // getbalance64
-export function getbalance64(rpc) {
+ function getbalance64(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getbalance64().then(resp => {
         //     resolve(resp)
@@ -130,20 +130,20 @@ export function getbalance64(rpc) {
 }
 
 // getnewaddress ( "account" )
-export function getnewaddress(rpc) {
+ function getnewaddress(rpc) {
     return new Promise((resolve, reject) => {
-        // rpc.getnewaddress().then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("getnewaddress - Not supported yet")
+         rpc.getnewaddress().then(resp => {
+             resolve(resp)
+         }).catch(error => {
+             console.log(error.response.data)
+             reject(error.response.data)
+         })
+        //reject("getnewaddress - Not supported yet")
     })
 }
 
 // getrawchangeaddress
-export function getrawchangeaddress(rpc) {
+ function getrawchangeaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getrawchangeaddress().then(resp => {
         //     resolve(resp)
@@ -156,7 +156,7 @@ export function getrawchangeaddress(rpc) {
 }
 
 // getreceivedbyaccount "account" ( minconf )
-export function getreceivedbyaccount(rpc) {
+ function getreceivedbyaccount(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getreceivedbyaccount().then(resp => {
         //     resolve(resp)
@@ -169,7 +169,7 @@ export function getreceivedbyaccount(rpc) {
 }
 
 // getreceivedbyaddress "KMD_address" ( minconf )
-export function getreceivedbyaddress(rpc) {
+ function getreceivedbyaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getreceivedbyaddress().then(resp => {
         //     resolve(resp)
@@ -182,7 +182,7 @@ export function getreceivedbyaddress(rpc) {
 }
 
 // gettransaction "txid" ( includeWatchonly )
-export function gettransaction(rpc) {
+ function gettransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.gettransaction().then(resp => {
         //     resolve(resp)
@@ -195,7 +195,7 @@ export function gettransaction(rpc) {
 }
 
 // getunconfirmedbalance
-export function getunconfirmedbalance(rpc) {
+ function getunconfirmedbalance(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getunconfirmedbalance().then(resp => {
         //     resolve(resp)
@@ -218,7 +218,7 @@ export function getunconfirmedbalance(rpc) {
  *
  * @apiSuccess {Object} resp returns json object of daemon info
  */
-export function getwalletinfo(rpc) {
+ function getwalletinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getwalletinfo().then(resp => {
             resolve(resp)
@@ -230,7 +230,7 @@ export function getwalletinfo(rpc) {
 }
 
 // importaddress "address" ( "label" rescan )
-export function importaddress(rpc) {
+ function importaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.importaddress().then(resp => {
         //     resolve(resp)
@@ -243,7 +243,7 @@ export function importaddress(rpc) {
 }
 
 // importprivkey "komodoprivkey" ( "label" rescan )
-export function importprivkey(rpc) {
+ function importprivkey(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.importprivkey().then(resp => {
         //     resolve(resp)
@@ -256,7 +256,7 @@ export function importprivkey(rpc) {
 }
 
 // importwallet "filename"
-export function importwallet(rpc) {
+ function importwallet(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.importwallet().then(resp => {
         //     resolve(resp)
@@ -269,7 +269,7 @@ export function importwallet(rpc) {
 }
 
 // keypoolrefill ( newsize )
-export function keypoolrefill(rpc) {
+ function keypoolrefill(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.keypoolrefill().then(resp => {
         //     resolve(resp)
@@ -282,7 +282,7 @@ export function keypoolrefill(rpc) {
 }
 
 // listaccounts ( minconf includeWatchonly)
-export function listaccounts(rpc) {
+ function listaccounts(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listaccounts().then(resp => {
         //     resolve(resp)
@@ -295,7 +295,7 @@ export function listaccounts(rpc) {
 }
 
 // listaddressgroupings
-export function listaddressgroupings(rpc) {
+ function listaddressgroupings(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listaddressgroupings().then(resp => {
         //     resolve(resp)
@@ -308,7 +308,7 @@ export function listaddressgroupings(rpc) {
 }
 
 // listlockunspent
-export function listlockunspent(rpc) {
+ function listlockunspent(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listlockunspent().then(resp => {
         //     resolve(resp)
@@ -321,7 +321,7 @@ export function listlockunspent(rpc) {
 }
 
 // listreceivedbyaccount ( minconf includeempty includeWatchonly)
-export function listreceivedbyaccount(rpc) {
+ function listreceivedbyaccount(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listreceivedbyaccount().then(resp => {
         //     resolve(resp)
@@ -334,7 +334,7 @@ export function listreceivedbyaccount(rpc) {
 }
 
 // listreceivedbyaddress ( minconf includeempty includeWatchonly)
-export function listreceivedbyaddress(rpc) {
+ function listreceivedbyaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listreceivedbyaddress().then(resp => {
         //     resolve(resp)
@@ -347,7 +347,7 @@ export function listreceivedbyaddress(rpc) {
 }
 
 // listsinceblock ( "blockhash" target-confirmations includeWatchonly)
-export function listsinceblock(rpc) {
+ function listsinceblock(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listsinceblock().then(resp => {
         //     resolve(resp)
@@ -360,7 +360,7 @@ export function listsinceblock(rpc) {
 }
 
 // listtransactions ( "account" count from includeWatchonly)
-export function listtransactions(rpc) {
+ function listtransactions(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listtransactions().then(resp => {
         //     resolve(resp)
@@ -373,7 +373,7 @@ export function listtransactions(rpc) {
 }
 
 // listunspent ( minconf maxconf  ["address",...] )
-export function listunspent(rpc) {
+ function listunspent(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listunspent().then(resp => {
         //     resolve(resp)
@@ -386,7 +386,7 @@ export function listunspent(rpc) {
 }
 
 // lockunspent unlock [{"txid":"txid","vout":n},...]
-export function lockunspent(rpc) {
+ function lockunspent(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.lockunspent().then(resp => {
         //     resolve(resp)
@@ -399,7 +399,7 @@ export function lockunspent(rpc) {
 }
 
 // move "fromaccount" "toaccount" amount ( minconf "comment" )
-export function move(rpc) {
+ function move(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.move().then(resp => {
         //     resolve(resp)
@@ -412,7 +412,7 @@ export function move(rpc) {
 }
 
 // resendwallettransactions
-export function resendwallettransactions(rpc) {
+ function resendwallettransactions(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.resendwallettransactions().then(resp => {
         //     resolve(resp)
@@ -425,7 +425,7 @@ export function resendwallettransactions(rpc) {
 }
 
 // sendfrom "fromaccount" "toKMDaddress" amount ( minconf "comment" "comment-to" )
-export function sendfrom(rpc) {
+ function sendfrom(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.sendfrom().then(resp => {
         //     resolve(resp)
@@ -438,7 +438,7 @@ export function sendfrom(rpc) {
 }
 
 // sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
-export function sendmany(rpc) {
+ function sendmany(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.sendmany().then(resp => {
         //     resolve(resp)
@@ -451,20 +451,20 @@ export function sendmany(rpc) {
 }
 
 // sendtoaddress "KMD_address" amount ( "comment" "comment-to" subtractfeefromamount )
-export function sendtoaddress(rpc) {
+ function sendtoaddress(rpc, address="", amount=0) {
     return new Promise((resolve, reject) => {
-        // rpc.sendtoaddress(address, amount).then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("sendtoaddress - Not supported yet")
+         rpc.sendtoaddress(address, amount).then(resp => {
+             resolve(resp)
+         }).catch(error => {
+             //console.log(error.response.data)
+             reject(error.response.data)
+         })
+        //reject("sendtoaddress - Not supported yet")
     })
 }
 
 // setaccount "KMD_address" "account"
-export function setaccount(rpc) {
+ function setaccount(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.setaccount().then(resp => {
         //     resolve(resp)
@@ -477,7 +477,7 @@ export function setaccount(rpc) {
 }
 
 // settxfee amount
-export function settxfee(rpc) {
+ function settxfee(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.settxfee().then(resp => {
         //     resolve(resp)
@@ -490,7 +490,7 @@ export function settxfee(rpc) {
 }
 
 // signmessage "KMD address" "message"
-export function signmessage(rpc) {
+ function signmessage(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.signmessage().then(resp => {
         //     resolve(resp)
@@ -502,47 +502,47 @@ export function signmessage(rpc) {
     })
 }
 
-// z_exportkey "zaddr"
-export function z_exportkey(rpc) {
+// z_key "zaddr"
+ function z_key(rpc) {
     return new Promise((resolve, reject) => {
-        // rpc.z_exportkey().then(resp => {
+        // rpc.z_key().then(resp => {
         //     resolve(resp)
         // }).catch(error => {
         //     console.log(error)
         //     reject(error)
         // })
-        reject("z_exportkey - Not supported yet")
+        reject("z_key - Not supported yet")
     })
 }
 
-// z_exportviewingkey "zaddr"
-export function z_exportviewingkey(rpc) {
+// z_viewingkey "zaddr"
+ function z_viewingkey(rpc) {
     return new Promise((resolve, reject) => {
-        // rpc.z_exportviewingkey().then(resp => {
+        // rpc.z_viewingkey().then(resp => {
         //     resolve(resp)
         // }).catch(error => {
         //     console.log(error)
         //     reject(error)
         // })
-        reject("z_exportviewingkey - Not supported yet")
+        reject("z_viewingkey - Not supported yet")
     })
 }
 
-// z_exportwallet "filename"
-export function z_exportwallet(rpc) {
+// z_wallet "filename"
+ function z_wallet(rpc) {
     return new Promise((resolve, reject) => {
-        // rpc.z_exportwallet().then(resp => {
+        // rpc.z_wallet().then(resp => {
         //     resolve(resp)
         // }).catch(error => {
         //     console.log(error)
         //     reject(error)
         // })
-        reject("z_exportwallet - Not supported yet")
+        reject("z_wallet - Not supported yet")
     })
 }
 
 // z_getbalance "address" ( minconf )
-export function z_getbalance(rpc) {
+ function z_getbalance(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_getbalance().then(resp => {
         //     resolve(resp)
@@ -555,7 +555,7 @@ export function z_getbalance(rpc) {
 }
 
 // z_getnewaddress
-export function z_getnewaddress(rpc) {
+ function z_getnewaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_getnewaddress().then(resp => {
         //     resolve(resp)
@@ -567,8 +567,8 @@ export function z_getnewaddress(rpc) {
     })
 }
 
-// z_getoperationresult (["operationid", ... ]) 
-export function z_getoperationresult(rpc) {
+// z_getoperationresult (["operationid", ... ])
+ function z_getoperationresult(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_getoperationresult().then(resp => {
         //     resolve(resp)
@@ -580,8 +580,8 @@ export function z_getoperationresult(rpc) {
     })
 }
 
-// z_getoperationstatus (["operationid", ... ]) 
-export function z_getoperationstatus(rpc) {
+// z_getoperationstatus (["operationid", ... ])
+ function z_getoperationstatus(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_getoperationstatus().then(resp => {
         //     resolve(resp)
@@ -594,7 +594,7 @@ export function z_getoperationstatus(rpc) {
 }
 
 // z_gettotalbalance ( minconf includeWatchonly )
-export function z_gettotalbalance(rpc) {
+ function z_gettotalbalance(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_gettotalbalance().then(resp => {
         //     resolve(resp)
@@ -607,7 +607,7 @@ export function z_gettotalbalance(rpc) {
 }
 
 // z_importkey "zkey" ( rescan startHeight )
-export function z_importkey(rpc) {
+ function z_importkey(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_importkey().then(resp => {
         //     resolve(resp)
@@ -620,7 +620,7 @@ export function z_importkey(rpc) {
 }
 
 // z_importviewingkey "vkey" ( rescan startHeight )
-export function z_importviewingkey(rpc) {
+ function z_importviewingkey(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_importviewingkey().then(resp => {
         //     resolve(resp)
@@ -633,7 +633,7 @@ export function z_importviewingkey(rpc) {
 }
 
 // z_importwallet "filename"
-export function z_importwallet(rpc) {
+ function z_importwallet(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_importwallet().then(resp => {
         //     resolve(resp)
@@ -646,7 +646,7 @@ export function z_importwallet(rpc) {
 }
 
 // z_listaddresses ( includeWatchonly )
-export function z_listaddresses(rpc) {
+ function z_listaddresses(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_listaddresses().then(resp => {
         //     resolve(resp)
@@ -659,7 +659,7 @@ export function z_listaddresses(rpc) {
 }
 
 // z_listoperationids
-export function z_listoperationids(rpc) {
+ function z_listoperationids(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_listoperationids().then(resp => {
         //     resolve(resp)
@@ -672,7 +672,7 @@ export function z_listoperationids(rpc) {
 }
 
 // z_listreceivedbyaddress "address" ( minconf )
-export function z_listreceivedbyaddress(rpc) {
+ function z_listreceivedbyaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_listreceivedbyaddress().then(resp => {
         //     resolve(resp)
@@ -685,7 +685,7 @@ export function z_listreceivedbyaddress(rpc) {
 }
 
 // z_mergetoaddress ["fromaddress", ... ] "toaddress" ( fee ) ( transparent_limit ) ( shielded_limit ) ( memo )
-export function z_mergetoaddress(rpc) {
+ function z_mergetoaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_mergetoaddress().then(resp => {
         //     resolve(resp)
@@ -698,20 +698,20 @@ export function z_mergetoaddress(rpc) {
 }
 
 // z_sendmany "fromaddress" [{"address":... ,"amount":...},...] ( minconf ) ( fee )
-export function z_sendmany(rpc) {
+ function z_sendmany(rpc, fromAddress, params) {
     return new Promise((resolve, reject) => {
-        // rpc.z_sendmany().then(resp => {
-        //     resolve(resp)
-        // }).catch(error => {
-        //     console.log(error)
-        //     reject(error)
-        // })
-        reject("z_sendmany - Not supported yet")
+         rpc.z_sendmany(fromAddress, params).then(resp => {
+             resolve(resp)
+         }).catch(error => {
+             console.log(error.response.data)
+             reject(error.response.data)
+         })
+        //reject("z_sendmany - Not supported yet")
     })
 }
 
 // z_shieldcoinbase "fromaddress" "tozaddress" ( fee ) ( limit )
-export function z_shieldcoinbase(rpc) {
+ function z_shieldcoinbase(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_shieldcoinbase().then(resp => {
         //     resolve(resp)
@@ -724,7 +724,7 @@ export function z_shieldcoinbase(rpc) {
 }
 
 // zcbenchmark benchmarktype samplecount
-export function zcbenchmark(rpc) {
+ function zcbenchmark(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.zcbenchmark().then(resp => {
         //     resolve(resp)
@@ -737,7 +737,7 @@ export function zcbenchmark(rpc) {
 }
 
 // zcrawjoinsplit rawtx inputs outputs vpub_old vpub_new
-export function zcrawjoinsplit(rpc) {
+ function zcrawjoinsplit(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.zcrawjoinsplit().then(resp => {
         //     resolve(resp)
@@ -750,7 +750,7 @@ export function zcrawjoinsplit(rpc) {
 }
 
 // zcrawkeygen
-export function zcrawkeygen(rpc) {
+ function zcrawkeygen(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.zcrawkeygen().then(resp => {
         //     resolve(resp)
@@ -763,7 +763,7 @@ export function zcrawkeygen(rpc) {
 }
 
 // zcrawreceive zcsecretkey encryptednote
-export function zcrawreceive(rpc) {
+ function zcrawreceive(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.zcrawreceive().then(resp => {
         //     resolve(resp)
@@ -776,7 +776,7 @@ export function zcrawreceive(rpc) {
 }
 
 // zcsamplejoinsplit
-export function zcsamplejoinsplit(rpc) {
+ function zcsamplejoinsplit(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.zcsamplejoinsplit().then(resp => {
         //     resolve(resp)
@@ -789,7 +789,9 @@ export function zcsamplejoinsplit(rpc) {
 }
 
 
-export default {
+
+
+ module.exports = {
     addmultisigaddress,
     backupwallet,
     dumpprivkey,
@@ -828,9 +830,9 @@ export default {
     setaccount,
     settxfee,
     signmessage,
-    z_exportkey,
-    z_exportviewingkey,
-    z_exportwallet,
+    z_key,
+    z_viewingkey,
+    z_wallet,
     z_getbalance,
     z_getnewaddress,
     z_getoperationresult,

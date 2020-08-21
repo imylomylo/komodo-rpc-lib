@@ -1,6 +1,6 @@
 // == Dice ==
 // diceaddfunds name fundingtxid amount
-export function diceaddfunds(rpc) {
+ function diceaddfunds(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.diceaddfunds().then(resp => {
         //     resolve(resp)
@@ -14,7 +14,7 @@ export function diceaddfunds(rpc) {
 
 
 // diceaddress [pubkey]
-export function diceaddress(rpc) {
+ function diceaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.diceaddress().then(resp => {
         //     resolve(resp)
@@ -28,7 +28,7 @@ export function diceaddress(rpc) {
 
 
 // dicebet name fundingtxid amount odds
-export function dicebet(rpc) {
+ function dicebet(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.dicebet().then(resp => {
         //     resolve(resp)
@@ -42,7 +42,7 @@ export function dicebet(rpc) {
 
 
 // dicefinish name fundingtxid bettxid
-export function dicefinish(rpc) {
+ function dicefinish(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.dicefinish().then(resp => {
         //     resolve(resp)
@@ -56,7 +56,7 @@ export function dicefinish(rpc) {
 
 
 // dicefund name funds minbet maxbet maxodds timeoutblocks
-export function dicefund(rpc) {
+ function dicefund(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.dicefund().then(resp => {
         //     resolve(resp)
@@ -70,7 +70,7 @@ export function dicefund(rpc) {
 
 
 // diceinfo fundingtxid
-export function diceinfo(rpc) {
+ function diceinfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.diceinfo().then(resp => {
         //     resolve(resp)
@@ -84,7 +84,7 @@ export function diceinfo(rpc) {
 
 
 // dicelist
-export function dicelist(rpc) {
+ function dicelist(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.dicelist().then(resp => {
         //     resolve(resp)
@@ -98,7 +98,7 @@ export function dicelist(rpc) {
 
 
 // dicestatus name fundingtxid bettxid
-export function dicestatus(rpc) {
+ function dicestatus(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.dicestatus().then(resp => {
         //     resolve(resp)
@@ -110,7 +110,7 @@ export function dicestatus(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     diceaddfunds,
     diceaddress,
     dicebet,

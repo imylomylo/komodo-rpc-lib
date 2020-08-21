@@ -1,6 +1,6 @@
 // == Rewards ==
 // rewardsaddfunding name fundingtxid amount
-export function rewardsaddfunding(rpc) {
+ function rewardsaddfunding(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.rewardsaddfunding().then(resp => {
         //     resolve(resp)
@@ -14,7 +14,7 @@ export function rewardsaddfunding(rpc) {
 
 
 // rewardsaddress [pubkey]
-export function rewardsaddress(rpc) {
+ function rewardsaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.rewardsaddress().then(resp => {
         //     resolve(resp)
@@ -27,7 +27,7 @@ export function rewardsaddress(rpc) {
 }
 
 // rewardscreatefunding name amount APR mindays maxdays mindeposit
-export function rewardscreatefunding(rpc) {
+ function rewardscreatefunding(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.rewardscreatefunding().then(resp => {
         //     resolve(resp)
@@ -40,7 +40,7 @@ export function rewardscreatefunding(rpc) {
 }
 
 // rewardsinfo fundingtxid
-export function rewardsinfo(rpc) {
+ function rewardsinfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.rewardsinfo().then(resp => {
         //     resolve(resp)
@@ -53,7 +53,7 @@ export function rewardsinfo(rpc) {
 }
 
 // rewardslist
-export function rewardslist(rpc) {
+ function rewardslist(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.rewardslist().then(resp => {
         //     resolve(resp)
@@ -66,7 +66,7 @@ export function rewardslist(rpc) {
 }
 
 // rewardslock name fundingtxid amount
-export function rewardslock(rpc) {
+ function rewardslock(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.rewardslock().then(resp => {
         //     resolve(resp)
@@ -79,7 +79,7 @@ export function rewardslock(rpc) {
 }
 
 // rewardsunlock name fundingtxid [txid]
-export function rewardsunlock(rpc) {
+ function rewardsunlock(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.rewardsunlock().then(resp => {
         //     resolve(resp)
@@ -91,7 +91,7 @@ export function rewardsunlock(rpc) {
     })
 }
 
-export default{
+ module.exports ={
     rewardsaddfunding,
     rewardsaddress,
     rewardscreatefunding,

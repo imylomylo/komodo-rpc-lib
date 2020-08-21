@@ -1,6 +1,6 @@
 // == Network ==
 // addnode "node" "add|remove|onetry"
-export function addnode(rpc) {
+ function addnode(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.addnode().then(resp => {
         //     resolve(resp)
@@ -13,7 +13,7 @@ export function addnode(rpc) {
 }
 
 // clearbanned
-export function clearbanned(rpc) {
+ function clearbanned(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.clearbanned().then(resp => {
         //     resolve(resp)
@@ -25,8 +25,8 @@ export function clearbanned(rpc) {
     })
 }
 
-// disconnectnode "node" 
-export function disconnectnode(rpc) {
+// disconnectnode "node"
+ function disconnectnode(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.disconnectnode().then(resp => {
         //     resolve(resp)
@@ -39,7 +39,7 @@ export function disconnectnode(rpc) {
 }
 
 // getaddednodeinfo dns ( "node" )
-export function getaddednodeinfo(rpc) {
+ function getaddednodeinfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getaddednodeinfo().then(resp => {
         //     resolve(resp)
@@ -52,7 +52,7 @@ export function getaddednodeinfo(rpc) {
 }
 
 // getconnectioncount
-export function getconnectioncount(rpc) {
+ function getconnectioncount(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getconnectioncount().then(resp => {
         //     resolve(resp)
@@ -65,7 +65,7 @@ export function getconnectioncount(rpc) {
 }
 
 // getdeprecationinfo
-export function getdeprecationinfo(rpc) {
+ function getdeprecationinfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getdeprecationinfo().then(resp => {
         //     resolve(resp)
@@ -78,7 +78,7 @@ export function getdeprecationinfo(rpc) {
 }
 
 // getnettotals
-export function getnettotals(rpc) {
+ function getnettotals(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getnettotals().then(resp => {
         //     resolve(resp)
@@ -91,7 +91,7 @@ export function getnettotals(rpc) {
 }
 
 // getnetworkinfo
-export function getnetworkinfo(rpc) {
+ function getnetworkinfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getnetworkinfo().then(resp => {
         //     resolve(resp)
@@ -104,7 +104,7 @@ export function getnetworkinfo(rpc) {
 }
 
 // getpeerinfo
-export function getpeerinfo(rpc) {
+ function getpeerinfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getpeerinfo().then(resp => {
         //     resolve(resp)
@@ -117,7 +117,7 @@ export function getpeerinfo(rpc) {
 }
 
 // listbanned
-export function listbanned(rpc) {
+ function listbanned(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.listbanned().then(resp => {
         //     resolve(resp)
@@ -130,7 +130,7 @@ export function listbanned(rpc) {
 }
 
 // ping
-export function ping(rpc) {
+ function ping(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.ping().then(resp => {
         //     resolve(resp)
@@ -143,7 +143,7 @@ export function ping(rpc) {
 }
 
 // setban "ip(/netmask)" "add|remove" (bantime) (absolute)
-export function setban(rpc) {
+ function setban(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.setban().then(resp => {
         //     resolve(resp)
@@ -155,7 +155,7 @@ export function setban(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     addnode,
     clearbanned,
     disconnectnode,

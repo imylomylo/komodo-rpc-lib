@@ -1,4 +1,4 @@
-import stdrpc from 'stdrpc'
+const stdrpc = require('stdrpc');
 
 /**
  * @api {post} / connect
@@ -13,7 +13,7 @@ import stdrpc from 'stdrpc'
  *
  * @apiSuccess {Object} rpc an object for re-use on future api calls
  */
-export function connect(url, username, password) {
+ function connect(url, username, password) {
     console.log("Connecting to " + url)
     const rpc = stdrpc({
         url: url,
@@ -24,7 +24,7 @@ export function connect(url, username, password) {
 }
 
 /**
- * @api {post} / configure 
+ * @api {post} / configure
  * @apiName configure
  * @apiGroup control
  * @apiDescription configure the rpc object for connecting to daemon
@@ -35,7 +35,7 @@ export function connect(url, username, password) {
  *
  * @apiSuccess {Object} rpc an object for re-use on future api calls
  */
-export function configure(url, username, password) {
+ function configure(url, username, password) {
     console.log("Connecting to " + url)
     const rpc = stdrpc({
         url: url,
@@ -56,7 +56,7 @@ export function configure(url, username, password) {
  *
  * @apiSuccess {Object} resp returns json object of daemon info
  */
-export function getinfo(rpc) {
+ function getinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getinfo().then(resp => {
             console.log(resp)
@@ -69,7 +69,7 @@ export function getinfo(rpc) {
 }
 
 /**
- * @api {post} / help 
+ * @api {post} / help
  * @apiName help
  * @apiGroup control
  * @apiDescription help for all commands or single command when a command is passed in
@@ -79,7 +79,7 @@ export function getinfo(rpc) {
  *
  * @apiSuccess {Object} resp returns json object response
  */
-export function help(rpc, command = '') {
+ function help(rpc, command = '') {
     return new Promise((resolve, reject) => {
         rpc.help(command).then(resp => {
             console.log(resp)
@@ -92,7 +92,7 @@ export function help(rpc, command = '') {
 }
 
 /**
- * @api {post} / stop 
+ * @api {post} / stop
  * @apiName stop
  * @apiGroup control
  * @apiDescription stops the daemon
@@ -101,7 +101,7 @@ export function help(rpc, command = '') {
  *
  * @apiSuccess {Object} resp returns json object response
  */
-export function stop(rpc) {
+ function stop(rpc) {
     return new Promise((resolve, reject) => {
         rpc.stop().then(resp => {
             resolve(resp)
@@ -112,4 +112,4 @@ export function stop(rpc) {
     })
 }
 
-export default { connect, getinfo, help, stop }
+ module.exports = { connect, getinfo, help, stop }

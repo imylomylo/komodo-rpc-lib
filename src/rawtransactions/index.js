@@ -1,6 +1,6 @@
 // == Rawtransactions ==
 // createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,...}
-export function createrawtransaction(rpc) {
+ function createrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.createrawtransaction().then(resp => {
         //     resolve(resp)
@@ -13,7 +13,7 @@ export function createrawtransaction(rpc) {
 }
 
 // decoderawtransaction "hexstring"
-export function decoderawtransaction(rpc) {
+ function decoderawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.decoderawtransaction().then(resp => {
         //     resolve(resp)
@@ -26,7 +26,7 @@ export function decoderawtransaction(rpc) {
 }
 
 // decodescript "hex"
-export function decodescript(rpc) {
+ function decodescript(rpc) {
     return new Promise((resolve, reject) => {
         //     rpc.decodescript().then(resp => {
         //         resolve(resp)
@@ -39,7 +39,7 @@ export function decodescript(rpc) {
 }
 
 // fundrawtransaction "hexstring"
-export function fundrawtransaction(rpc) {
+ function fundrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.fundrawtransaction().then(resp => {
         //     resolve(resp)
@@ -52,7 +52,7 @@ export function fundrawtransaction(rpc) {
 }
 
 // getrawtransaction "txid" ( verbose )
-export function getrawtransaction(rpc) {
+ function getrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getrawtransaction().then(resp => {
         //     resolve(resp)
@@ -65,7 +65,7 @@ export function getrawtransaction(rpc) {
 }
 
 // sendrawtransaction "hexstring" ( allowhighfees )
-export function sendrawtransaction(rpc) {
+ function sendrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.sendrawtransaction().then(resp => {
         //     resolve(resp)
@@ -78,7 +78,7 @@ export function sendrawtransaction(rpc) {
 }
 
 // signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
-export function signrawtransaction(rpc) {
+ function signrawtransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.signrawtransaction().then(resp => {
         //     resolve(resp)
@@ -90,7 +90,7 @@ export function signrawtransaction(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     createrawtransaction,
     decoderawtransaction,
     decodescript,
