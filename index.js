@@ -9,6 +9,7 @@ const rpc = connect("http://127.0.0.1:8096", rpcuser,password)
 const addressindex = require('./src/addressindex');
 const auction = require('./src/auction');
 const blockchain = require('./src/blockchain');
+const control = require('./src/control');
 const crosschain = require('./src/crosschain');
 const dice = require('./src/dice');
 const disclosure = require('./src/disclosure');
@@ -28,6 +29,7 @@ module.exports = {
     addressindex,
     auction,
     blockchain,
+    control,
     crosschain,
     dice,
     disclosure,
