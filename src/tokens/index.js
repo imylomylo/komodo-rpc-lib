@@ -1,6 +1,6 @@
 // == Tokens ==
 // tokenaddress [pubkey]
-export function tokenaddress(rpc) {
+function tokenaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenaddress().then(resp => {
         //     resolve(resp)
@@ -13,7 +13,7 @@ export function tokenaddress(rpc) {
 }
 
 // tokenask numtokens tokenid price
-export function tokenask(rpc) {
+function tokenask(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenask().then(resp => {
         //     resolve(resp)
@@ -26,7 +26,7 @@ export function tokenask(rpc) {
 }
 
 // tokenbalance tokenid [pubkey]
-export function tokenbalance(rpc) {
+function tokenbalance(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenbalance().then(resp => {
         //     resolve(resp)
@@ -39,7 +39,7 @@ export function tokenbalance(rpc) {
 }
 
 // tokenbid numtokens tokenid price
-export function tokenbid(rpc) {
+function tokenbid(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenbid().then(resp => {
         //     resolve(resp)
@@ -52,7 +52,7 @@ export function tokenbid(rpc) {
 }
 
 // tokencancelask tokenid asktxid
-export function tokencancelask(rpc) {
+function tokencancelask(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokencancelask().then(resp => {
         //     resolve(resp)
@@ -65,7 +65,7 @@ export function tokencancelask(rpc) {
 }
 
 // tokencancelbid tokenid bidtxid
-export function tokencancelbid(rpc) {
+function tokencancelbid(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokencancelbid().then(resp => {
         //     resolve(resp)
@@ -78,7 +78,7 @@ export function tokencancelbid(rpc) {
 }
 
 // tokencreate name supply description
-export function tokencreate(rpc) {
+function tokencreate(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokencreate().then(resp => {
         //     resolve(resp)
@@ -91,7 +91,7 @@ export function tokencreate(rpc) {
 }
 
 // tokenfillask tokenid asktxid fillunits
-export function tokenfillask(rpc) {
+function tokenfillask(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenfillask().then(resp => {
         //     resolve(resp)
@@ -104,7 +104,7 @@ export function tokenfillask(rpc) {
 }
 
 // tokenfillbid tokenid bidtxid fillamount
-export function tokenfillbid(rpc) {
+function tokenfillbid(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenfillbid().then(resp => {
         //     resolve(resp)
@@ -117,7 +117,7 @@ export function tokenfillbid(rpc) {
 }
 
 // tokeninfo tokenid
-export function tokeninfo(rpc) {
+function tokeninfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokeninfo().then(resp => {
         //     resolve(resp)
@@ -130,7 +130,7 @@ export function tokeninfo(rpc) {
 }
 
 // tokenlist
-export function tokenlist(rpc) {
+function tokenlist(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenlist().then(resp => {
         //     resolve(resp)
@@ -143,7 +143,7 @@ export function tokenlist(rpc) {
 }
 
 // tokenorders [tokenid]
-export function tokenorders(rpc) {
+function tokenorders(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokenorders().then(resp => {
         //     resolve(resp)
@@ -156,7 +156,7 @@ export function tokenorders(rpc) {
 }
 
 // tokentransfer tokenid destpubkey amount
-export function tokentransfer(rpc) {
+function tokentransfer(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.tokentransfer().then(resp => {
         //     resolve(resp)
@@ -168,7 +168,7 @@ export function tokentransfer(rpc) {
     })
 }
 
-export default {
+module.exports = {
     tokenaddress,
     tokenask,
     tokenbalance,

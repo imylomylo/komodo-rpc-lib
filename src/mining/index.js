@@ -1,6 +1,6 @@
 // == Mining ==
 // getblocksubsidy height
-export function getblocksubsidy(rpc) {
+ function getblocksubsidy(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getblocksubsidy().then(resp => {
         //     resolve(resp)
@@ -13,7 +13,7 @@ export function getblocksubsidy(rpc) {
 }
 
 // getblocktemplate ( "jsonrequestobject" )
-export function getblocktemplate(rpc) {
+ function getblocktemplate(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getblocktemplate().then(resp => {
         //     resolve(resp)
@@ -26,7 +26,7 @@ export function getblocktemplate(rpc) {
 }
 
 // getlocalsolps
-export function getlocalsolps(rpc) {
+ function getlocalsolps(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getlocalsolps().then(resp => {
         //     resolve(resp)
@@ -39,7 +39,7 @@ export function getlocalsolps(rpc) {
 }
 
 // getmininginfo
-export function getmininginfo(rpc) {
+ function getmininginfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getmininginfo().then(resp => {
         //     resolve(resp)
@@ -52,7 +52,7 @@ export function getmininginfo(rpc) {
 }
 
 // getnetworkhashps ( blocks height )
-export function getnetworkhashps(rpc) {
+ function getnetworkhashps(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getnetworkhashps().then(resp => {
         //     resolve(resp)
@@ -65,7 +65,7 @@ export function getnetworkhashps(rpc) {
 }
 
 // getnetworksolps ( blocks height )
-export function getnetworksolps(rpc) {
+ function getnetworksolps(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.getnetworksolps().then(resp => {
         //     resolve(resp)
@@ -78,7 +78,7 @@ export function getnetworksolps(rpc) {
 }
 
 // prioritisetransaction <txid> <priority delta> <fee delta>
-export function prioritisetransaction(rpc) {
+ function prioritisetransaction(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.prioritisetransaction().then(resp => {
         //     resolve(resp)
@@ -91,7 +91,7 @@ export function prioritisetransaction(rpc) {
 }
 
 // submitblock "hexdata" ( "jsonparametersobject" )
-export function submitblock(rpc) {
+ function submitblock(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.submitblock().then(resp => {
         //     resolve(resp)
@@ -103,7 +103,7 @@ export function submitblock(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     getblocksubsidy,
     getblocktemplate,
     getlocalsolps,

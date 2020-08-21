@@ -1,6 +1,6 @@
 // == Blockchain ==
 // coinsupply <height>
-export function coinsupply(rpc) {
+ function coinsupply(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.coinsupply().then(resp => {
         //     resolve(resp)
@@ -23,7 +23,7 @@ export function coinsupply(rpc) {
  *
  * @apiSuccess {Object} resp returns json object of daemon info
  */
-export function getbestblockhash(rpc) {
+ function getbestblockhash(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getbestblockhash().then(resp => {
             resolve(resp)
@@ -47,7 +47,7 @@ export function getbestblockhash(rpc) {
  *
  * @apiSuccess {Object} resp returns json object of daemon info
  */
-export function getblock(rpc, hash_or_height) {
+ function getblock(rpc, hash_or_height) {
     return new Promise((resolve, reject) => {
         rpc.getblock(hash_or_height).then(resp => {
             resolve(resp)
@@ -59,7 +59,7 @@ export function getblock(rpc, hash_or_height) {
 }
 
 // getblockchaininfo
-export function getblockchaininfo(rpc) {
+ function getblockchaininfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getblockchaininfo().then(resp => {
             resolve(resp)
@@ -71,7 +71,7 @@ export function getblockchaininfo(rpc) {
 }
 
 // getblockcount
-export function getblockcount(rpc) {
+ function getblockcount(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getblockcount().then(resp => {
             resolve(resp)
@@ -83,7 +83,7 @@ export function getblockcount(rpc) {
 }
 
 // getblockhash index
-export function getblockhash(rpc, index) {
+ function getblockhash(rpc, index) {
     return new Promise((resolve, reject) => {
         rpc.getblockhash(index).then(resp => {
             resolve(resp)
@@ -95,7 +95,7 @@ export function getblockhash(rpc, index) {
 }
 
 // getblockhashes timestamp
-export function getblockhashes(rpc,timestamp) {
+ function getblockhashes(rpc,timestamp) {
     return new Promise((resolve, reject) => {
         rpc.getblockhashes(timestamp).then(resp => {
             resolve(resp)
@@ -107,7 +107,7 @@ export function getblockhashes(rpc,timestamp) {
 }
 
 // getblockheader "hash" ( verbose )
-export function getblockheader(rpc, hash, verbose = 0) {
+ function getblockheader(rpc, hash, verbose = 0) {
     return new Promise((resolve, reject) => {
         rpc.getblockheader(hash, verbose).then(resp => {
             resolve(resp)
@@ -119,7 +119,7 @@ export function getblockheader(rpc, hash, verbose = 0) {
 }
 
 // getchaintips
-export function getchaintips(rpc) {
+ function getchaintips(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getchaintips().then(resp => {
             resolve(resp)
@@ -131,7 +131,7 @@ export function getchaintips(rpc) {
 }
 
 // getdifficulty
-export function getdifficulty(rpc) {
+ function getdifficulty(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getdifficulty().then(resp => {
             resolve(resp)
@@ -143,7 +143,7 @@ export function getdifficulty(rpc) {
 }
 
 // getmempoolinfo
-export function getmempoolinfo(rpc) {
+ function getmempoolinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getmempoolinfo().then(resp => {
             resolve(resp)
@@ -155,7 +155,7 @@ export function getmempoolinfo(rpc) {
 }
 
 // getrawmempool ( verbose )
-export function getrawmempool(rpc, verbose = 0) {
+ function getrawmempool(rpc, verbose = 0) {
     return new Promise((resolve, reject) => {
         rpc.getrawmempool(verbose).then(resp => {
             resolve(resp)
@@ -167,7 +167,7 @@ export function getrawmempool(rpc, verbose = 0) {
 }
 
 // getspentinfo
-export function getspentinfo(rpc) {
+ function getspentinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getspentinfo().then(resp => {
             resolve(resp)
@@ -179,7 +179,7 @@ export function getspentinfo(rpc) {
 }
 
 // gettxout "txid" n ( includemempool )
-export function gettxout(rpc) {
+ function gettxout(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.gettxout().then(resp => {
         //     resolve(resp)
@@ -192,7 +192,7 @@ export function gettxout(rpc) {
 }
 
 // gettxoutproof ["txid",...] ( blockhash )
-export function gettxoutproof(rpc) {
+ function gettxoutproof(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.gettxoutproof().then(resp => {
         //     resolve(resp)
@@ -205,7 +205,7 @@ export function gettxoutproof(rpc) {
 }
 
 // gettxoutsetinfo
-export function gettxoutsetinfo(rpc) {
+ function gettxoutsetinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.gettxoutsetinfo().then(resp => {
             resolve(resp)
@@ -217,7 +217,7 @@ export function gettxoutsetinfo(rpc) {
 }
 
 // kvsearch key
-export function kvsearch(rpc, key) {
+ function kvsearch(rpc, key) {
     return new Promise((resolve, reject) => {
         rpc.kvsearch(key).then(resp => {
             resolve(resp)
@@ -229,7 +229,7 @@ export function kvsearch(rpc, key) {
 }
 
 // kvupdate key "value" days passphrase
-export function kvupdate(rpc) {
+ function kvupdate(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.kvupdate().then(resp => {
         //     resolve(resp)
@@ -242,7 +242,7 @@ export function kvupdate(rpc) {
 }
 
 // minerids needs height
-export function minerids(rpc) {
+ function minerids(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.minerids().then(resp => {
         //     resolve(resp)
@@ -255,7 +255,7 @@ export function minerids(rpc) {
 }
 
 // notaries height timestamp
-export function notaries(rpc) {
+ function notaries(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.notaries().then(resp => {
         //     resolve(resp)
@@ -268,7 +268,7 @@ export function notaries(rpc) {
 }
 
 // paxpending needs no args
-export function paxpending(rpc) {
+ function paxpending(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.paxpending().then(resp => {
         //     resolve(resp)
@@ -281,7 +281,7 @@ export function paxpending(rpc) {
 }
 
 // paxprice "base" "rel" height
-export function paxprice(rpc) {
+ function paxprice(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.paxprice().then(resp => {
         //     resolve(resp)
@@ -294,7 +294,7 @@ export function paxprice(rpc) {
 }
 
 // paxprices "base" "rel" maxsamples
-export function paxprices(rpc) {
+ function paxprices(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.paxprices().then(resp => {
         //     resolve(resp)
@@ -307,7 +307,7 @@ export function paxprices(rpc) {
 }
 
 // verifychain ( checklevel numblocks )
-export function verifychain(rpc) {
+ function verifychain(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.verifychain().then(resp => {
         //     resolve(resp)
@@ -320,7 +320,7 @@ export function verifychain(rpc) {
 }
 
 // verifytxoutproof "proof"
-export function verifytxoutproof(rpc) {
+ function verifytxoutproof(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.verifytxoutproof().then(resp => {
         //     resolve(resp)
@@ -333,7 +333,7 @@ export function verifytxoutproof(rpc) {
 }
 
 
-export default {
+ module.exports = {
     coinsupply,
     getbestblockhash,
     getblock,

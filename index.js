@@ -6,31 +6,28 @@ const rpc = connect("http://127.0.0.1:8096", rpcuser,password)
 */
 
 
-import stdrpc from 'stdrpc'
-import { addressindex } from './src/addressindex'
-import { auction } from './src/auction'
-import { blockchain } from './src/blockchain'
-import { control } from './src/control'
-import { crosschain } from './src/crosschain'
-import { dice } from './src/dice'
-import { disclosure } from './src/disclosure'
-import { faucet } from './src/faucet'
-import { fsm } from './src/fsm'
-import { generating } from './src/generating'
-import { lotto } from './src/lotto'
-import { mining } from './src/mining'
-import { network } from './src/network'
-import { rawtransactions } from './src/rawtransactions'
-import { rewards } from './src/rewards'
-import { tokens } from './src/tokens'
-import { util } from './src/util'
-import { wallet } from './src/wallet'
+const addressindex = require('./src/addressindex');
+const auction = require('./src/auction');
+const blockchain = require('./src/blockchain');
+const crosschain = require('./src/crosschain');
+const dice = require('./src/dice');
+const disclosure = require('./src/disclosure');
+const faucet = require('./src/faucet');
+const fsm = require('./src/fsm');
+const generating = require('./src/generating');
+const lotto = require('./src/lotto');
+const mining = require('./src/mining');
+const network = require('./src/network');
+const rawtransactions = require('./src/rawtransactions');
+const rewards = require('./src/rewards');
+const tokens = require('./src/tokens');
+const util = require('./src/util');
+const wallet = require('./src/wallet');
 
-export default {
+module.exports = {
     addressindex,
     auction,
     blockchain,
-    control,
     crosschain,
     dice,
     disclosure,

@@ -1,6 +1,6 @@
 // == FSM ==
 // FSMaddress [pubkey]
-export function FSMaddress(rpc) {
+ function FSMaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.FSMaddress().then(resp => {
         //     resolve(resp)
@@ -15,7 +15,7 @@ export function FSMaddress(rpc) {
 
 // == FSMcreate ==
 // FSMcreate name states
-export function FSMcreate(rpc) {
+ function FSMcreate(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.FSMcreate().then(resp => {
         //     resolve(resp)
@@ -30,7 +30,7 @@ export function FSMcreate(rpc) {
 
 // == FSMinfo ==
 // FSMinfo fundingtxid
-export function FSMinfo(rpc) {
+ function FSMinfo(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.FSMinfo().then(resp => {
         //     resolve(resp)
@@ -45,7 +45,7 @@ export function FSMinfo(rpc) {
 
 // == FSMlist ==
 // FSMlist
-export function FSMlist(rpc) {
+ function FSMlist(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.FSMlist().then(resp => {
         //     resolve(resp)
@@ -57,7 +57,7 @@ export function FSMlist(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     FSMaddress,
     FSMcreate,
     FSMinfo,

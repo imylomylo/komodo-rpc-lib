@@ -1,6 +1,6 @@
 // == Faucet ==
 // faucetaddress [pubkey]
-export function faucetaddress(rpc, pubkey) {
+ function faucetaddress(rpc, pubkey) {
     return new Promise((resolve, reject) => {
         rpc.faucetaddress(pubkey).then(resp => {
             resolve(resp)
@@ -14,7 +14,7 @@ export function faucetaddress(rpc, pubkey) {
 
 
 // faucetfund amount
-export function faucetfund(rpc) {
+ function faucetfund(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.faucetfund().then(resp => {
         //     resolve(resp)
@@ -28,7 +28,7 @@ export function faucetfund(rpc) {
 
 
 // faucetget
-export function faucetget(rpc) {
+ function faucetget(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.faucetget().then(resp => {
         //     resolve(resp)
@@ -42,7 +42,7 @@ export function faucetget(rpc) {
 
 
 // faucetinfo
-export function faucetinfo(rpc) {
+ function faucetinfo(rpc) {
     return new Promise((resolve, reject) => {
         rpc.faucetinfo().then(resp => {
             resolve(resp)
@@ -54,7 +54,7 @@ export function faucetinfo(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     faucetaddress,
     faucetfund,
     faucetget,

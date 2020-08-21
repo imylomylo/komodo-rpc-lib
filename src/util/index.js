@@ -1,6 +1,6 @@
 // == Util ==
 // createmultisig nrequired ["key",...]
-export function createmultisig(rpc) {
+ function createmultisig(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.createmultisig().then(resp => {
         //     resolve(resp)
@@ -13,7 +13,7 @@ export function createmultisig(rpc) {
 }
 
 // estimatefee nblocks
-export function estimatefee(rpc) {
+ function estimatefee(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.estimatefee().then(resp => {
         //     resolve(resp)
@@ -26,7 +26,7 @@ export function estimatefee(rpc) {
 }
 
 // estimatepriority nblocks
-export function estimatepriority(rpc) {
+ function estimatepriority(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.estimatepriority().then(resp => {
         //     resolve(resp)
@@ -39,7 +39,7 @@ export function estimatepriority(rpc) {
 }
 
 // invalidateblock "hash"
-export function invalidateblock(rpc) {
+ function invalidateblock(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.invalidateblock().then(resp => {
         //     resolve(resp)
@@ -52,7 +52,7 @@ export function invalidateblock(rpc) {
 }
 
 // jumblr_deposit "depositaddress"
-export function jumblr_deposit(rpc) {
+ function jumblr_deposit(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.jumblr_deposit().then(resp => {
         //     resolve(resp)
@@ -65,7 +65,7 @@ export function jumblr_deposit(rpc) {
 }
 
 // jumblr_pause
-export function jumblr_pause(rpc) {
+ function jumblr_pause(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.jumblr_pause().then(resp => {
         //     resolve(resp)
@@ -78,7 +78,7 @@ export function jumblr_pause(rpc) {
 }
 
 // jumblr_resume
-export function jumblr_resume(rpc) {
+ function jumblr_resume(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.jumblr_resume().then(resp => {
         //     resolve(resp)
@@ -91,7 +91,7 @@ export function jumblr_resume(rpc) {
 }
 
 // jumblr_secret "secretaddress"
-export function jumblr_secret(rpc) {
+ function jumblr_secret(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.jumblr_secret().then(resp => {
         //     resolve(resp)
@@ -104,7 +104,7 @@ export function jumblr_secret(rpc) {
 }
 
 // reconsiderblock "hash"
-export function reconsiderblock(rpc) {
+ function reconsiderblock(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.reconsiderblock().then(resp => {
         //     resolve(resp)
@@ -117,7 +117,7 @@ export function reconsiderblock(rpc) {
 }
 
 // validateaddress "komodoaddress"
-export function validateaddress(rpc, address) {
+ function validateaddress(rpc, address) {
     return new Promise((resolve, reject) => {
         rpc.validateaddress(address).then(resp => {
              resolve(resp)
@@ -130,7 +130,7 @@ export function validateaddress(rpc, address) {
 }
 
 // verifymessage "komodoaddress" "signature" "message"
-export function verifymessage(rpc) {
+ function verifymessage(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.verifymessage().then(resp => {
         //     resolve(resp)
@@ -143,7 +143,7 @@ export function verifymessage(rpc) {
 }
 
 // z_validateaddress "zaddr"
-export function z_validateaddress(rpc) {
+ function z_validateaddress(rpc) {
     return new Promise((resolve, reject) => {
         // rpc.z_validateaddress().then(resp => {
         //     resolve(resp)
@@ -155,7 +155,7 @@ export function z_validateaddress(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     createmultisig,
     estimatefee,
     estimatepriority,

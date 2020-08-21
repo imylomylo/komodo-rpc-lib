@@ -1,6 +1,6 @@
 // == Addressindex ==
 // getaddressbalance
-export function getaddressbalance(rpc) {
+ function getaddressbalance(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressbalance().then(resp => {
             resolve(resp)
@@ -12,7 +12,7 @@ export function getaddressbalance(rpc) {
 }
 
 // getaddressdeltas
-export function getaddressdeltas(rpc) {
+ function getaddressdeltas(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressdeltas().then(resp => {
             resolve(resp)
@@ -24,7 +24,7 @@ export function getaddressdeltas(rpc) {
 }
 
 // getaddressmempool
-export function getaddressmempool(rpc) {
+ function getaddressmempool(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressmempool().then(resp => {
             resolve(resp)
@@ -35,7 +35,7 @@ export function getaddressmempool(rpc) {
     })
 }
 // getaddresstxids
-export function getaddresstxids(rpc) {
+ function getaddresstxids(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddresstxids().then(resp => {
             resolve(resp)
@@ -46,7 +46,7 @@ export function getaddresstxids(rpc) {
     })
 }
 // getaddressutxos
-export function getaddressutxos(rpc) {
+ function getaddressutxos(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getaddressutxos().then(resp => {
             resolve(resp)
@@ -57,7 +57,7 @@ export function getaddressutxos(rpc) {
     })
 }
 // getsnapshot
-export function getsnapshot(rpc) {
+ function getsnapshot(rpc) {
     return new Promise((resolve, reject) => {
         rpc.getsnapshot().then(resp => {
             resolve(resp)
@@ -68,7 +68,7 @@ export function getsnapshot(rpc) {
     })
 }
 
-export default {
+ module.exports = {
     getaddressbalance,
     getaddressdeltas,
     getaddressmempool,
